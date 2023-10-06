@@ -1,0 +1,31 @@
+.searchbox{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #98989877;
+    border-radius: 6px;
+    width: 85%;
+    input{
+        height: 2rem;
+        border-radius: 6px;
+        border: none ;
+        width: 100%; 
+        background-color: transparent;
+        &:focus{
+            outline: none;
+
+        }
+
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        img{
+            background-color: transparent;
+            height: 1rem;
+            width:1rem;
+        }
+    }
+    
+}

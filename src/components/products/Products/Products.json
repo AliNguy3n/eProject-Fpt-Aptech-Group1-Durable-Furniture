@@ -1,0 +1,277 @@
+[
+    {
+        "id" : "1",
+        "name" : "Egg Chair Dur",
+        "top" :"1",
+        "brand" : 
+            {   "id" : "1",
+                "name" : "Durable Funitures"
+            }
+        ,
+        "categories" : 
+            {
+                "id" : "1",
+                "name" : "Armchairs"
+            }
+        ,
+        "price":"250.00",
+        "status":"New",
+        "model" :"DuraFur-A01",
+        "desc1" : "The Egg™ chair by DuraFur is masterpiece of design. We found the perfect shape for the chair by experimenting with wire and plaster in his garage. Today, the Egg chair is recognised user as one of the best products.",
+        "desc2" : "With a unique shape and organic design, it ensures a private space for the person sitting even if you are in a public space. Besides, you can also adjust the tilt of the chair to your liking. The Egg is ideal for placing in spaces such as waiting rooms and living rooms. McDonald's even uses this chair to place it in restaurant chains.",
+        "images" :[
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/egg-preview1.avif"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/egg-preview2.avif"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/egg-preview3.avif"},
+            {"id": "4", "Name": "pic4", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/egg-preview4.avif"}
+        ],
+        "imagesPreview":[
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/Egg-Rewool-drfur-01.png"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/Egg-Rewool-drfur-02.png"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/Egg-Rewool-drfur-03-blue.png"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/Egg-Rewool-drfur-04-black.png"}
+        ],
+        "imagesdms": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A01/egg-dimension.ashx",
+        "rating":"5",
+        "detail" : 
+            {   
+                "height": "104",
+                "width": "86",
+                "depth":"79",
+                "color":["white","black","gray","blue","pink"],
+                "material":["Aluminium, ","Leather, ","Steel, ","PUR foam, "]
+            },
+        "files" : "null"
+
+    },
+    {
+        "id" : "2",
+        "name" : "ALi Armchairs",
+        "top" :"1",
+        "brand" : 
+            {   "id" : "1",
+                "name" : "Durable Funitures"
+            }
+        ,
+        "categories" : 
+            {
+                "id" : "1",
+                "name" : "Armchairs"
+            }
+        ,
+        "price":"180.00",
+        "status":"New",
+        "model" :"DuraFur-A02",
+        "desc1" : "The ALi Armchairs fuses VietNam and Japanese design in nine layers of pressure moulded veneer and solid wood legs. Millimetre by millimetre, the design is an illustration of beauty and functionality.",
+        "desc2" : "The design is inspired by the combination of soft lines of silk, interwoven with Origami art.",
+        "images" :[
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-Armchairs-01.jpg"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-Armchairs-02.jpg"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-Armchairs-03.jpg"}
+            
+        ],
+        "imagesPreview":[
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-ArmChairs-brown.png"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-ArmChairs-white.png"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-ArmChairs-orange.png"}
+          
+        ],
+        "imagesdms": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A02/Ali-Armchairs-dimemsion.ashx",
+        "rating":"5",
+        "detail" : 
+            {   
+                "height": "86.5",
+                "width": "52.5 ",
+                "depth":"53",
+                "color":["white","brown","orange"],
+                "material":["Oiled Oak, ","Natural  "]
+            },
+        "files" : "null"
+
+    },
+    {
+        "id" : "3",
+        "name" : "Eden Chair",
+        "top" :"1",
+        "brand" : 
+            {   "id" : "1",
+                "name" : "Durable Funitures"
+            }
+        ,
+        "categories" : 
+            {
+                "id" : "1",
+                "name" : "Armchairs"
+            }
+        ,
+        "price":"220.00",
+        "status":"New",
+        "model" :"DuraFur-A03",
+        "desc1" : "Classic meets contemporary in the Eden dining chair. Designed by ALi Nguyen, organic shapes offer cocooning comfort while a sliim waist offers flexible sitting comfort. Enjoy the character of Eden and make a statement in your dining room.",
+        "desc2" : "Light, elegant and welcoming, the Eden is all about modern simplicity. Offering all-day comfort with a high, upright back and fixed deep seats, this refined, floating design will make a statement in any space.",
+        "images" :[
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-gray05.jpg"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-white05.jpg"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-brown05.jpg"},
+            {"id": "4", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-green04.jpg"}
+            
+        ],
+        "imagesPreview":[
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-black01.jpg"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-black02.jpg"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-black03.jpg"}
+           
+          
+        ],
+        "imagesdms": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A03/Eden-Armchair-dimension.png",
+        "rating":"5",
+        "detail" : 
+            {   
+                "height": "81.5",
+                "width": "52.5 ",
+                "depth":"54",
+                "color":["black","brown","green","gray","white"],
+                "material":["Aniline leather, ","100% natural grain","Solid Oak"]
+            },
+        "files" : "null"
+
+    },
+    {
+        "id" : "4",
+        "name" : "Satellite Chair",
+        "top" :"1",
+        "brand" : 
+            {   "id" : "1",
+                "name" : "Durable Funitures"
+            }
+        ,
+        "categories" : 
+            {
+                "id" : "1",
+                "name" : "Armchairs"
+            }
+        ,
+        "price":"190.00",
+        "status":"New",
+        "model" :"DuraFur-A04",
+        "desc1" : "The iconic Satellite Chair is all about curves, comfort and character. With a graceful, organic form and sublime comfort this modern chair will set an elegant tone in your home. The slender swivel base provides flexibility without compromising on the lines of the chair design. At the same time, the half-padded seat that follows the curves of the design, provides a unique expression.",
+        "desc2" : "Designed to stand with the Durable table as part of a matching set, the Hague dining chair is an elegant, timeless expression. With a soft, organic form, this contemporary yet comfortable chair seamlessly blends into any space.",
+        "images" :[
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-brown05.jpg"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-beige06.jpg"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-black07.jpg"}
+        ],
+        "imagesPreview":[
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-beige01.jpg"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-beige02.jpg"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-beige03.jpg"},
+            {"path": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-beige04.jpg"}
+           
+          
+        ],
+        "imagesdms": "/data/DurableFurnitrues/Chairs/Armchairs/DuraFur-A04/Satellite-chair-dimension.png",
+        "rating":"5",
+        "detail" : 
+            {   
+                "height": "81.5",
+                "width": "52.5 ",
+                "depth":"54",
+                "color":["black","brown","beige","gray","white"],
+                "material":["Fabric, ","Steel, ","Aluminium"]
+            },
+        "files" : "null"
+
+    },
+    {
+        "id" : "5",
+        "name" : "Home Alone",
+        "top" :"1",
+        "brand" : 
+            {   "id" : "1",
+                "name" : "Durable Funitures"
+            }
+        ,
+        "categories" : 
+            {
+                "id" : "15",
+                "name" : "Fabric Sofas"
+            }
+        ,
+        "price":"459.00",
+        "status":"New",
+        "model" :"DuraFur-FaSof01",
+        "desc1" : "The Home Alone Sofa is a sophisticated, modern sofa series that adds a healthy dose of comfort and luxury to everyday life. Characterized by clean lines and flawless attention to detail, this sofa series by Durable Funitures has a remarkably pronounced appearance that elevates and adds character to any room. ",
+        "desc2" : "Italian design inspired by Danish function, the lounge chair in the Home Alone Sofa series offers a comfortable and sophisticated space to sit back and relax. When combined with the corresponding pouf it creates an elegant chaise longue. It is available in the same width as the cushions of the sofa.",
+        "images" :[
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-gray-04.avif"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-gray-07.avif"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-gray-06.avif"},
+            {"id": "4", "Name": "pic4", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-gray-07.avif"}
+        ],
+        "imagesPreview":[
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-white-01.png"},
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-gray-02.png"},
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-gray-03.png"}
+  
+        ],
+        "imagesdms": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof01/Home-Alone-dimension.ashx",
+        "rating":"5",
+        "detail" : 
+            {   
+                "height": "74",
+                "width": "104 ",
+                "depth":"92",
+                "color":["beige","gray","white"],
+                "material":["Fabric, ","Steel, ","Aluminium"]
+            },
+        "files" : "null"
+
+    },
+    {
+        "id" : "6",
+        "name" : "The June",
+        "top" :"1",
+        "brand" : 
+            {   "id" : "1",
+                "name" : "Durable Funitures"
+            }
+        ,
+        "categories" : 
+            {
+                "id" : "15",
+                "name" : "Fabric Sofas"
+            }
+        ,
+        "price":"1250.00",
+        "status":"New",
+        "model" :"DuraFur-FaSof02",
+        "desc1" : "The sculptural, curvaceous The June sofa is characteristic of designer and sits at the intersection of clean Nordic aesthetics and southern elegance. The June is a functional, modular sofa that offers a myriad of possibilities: from a straight two-seater to larger L-shapes with chaise longue options. The result: a flexible sofa that is not only cosy and comfortable but also inherently beautiful from every angle. The two-seater variant is a visually appealing sofa for smaller settings or where space is limited.",
+        "desc2" : "null",
+        "images" :[
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-white07.jpg"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-pink06.jpg"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-white08.jpg"}
+        ],
+        "imagesPreview":[
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-yellow03.jpg"},
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-red01.jpg"},
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-blue02.jpg"},
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-gray04.jpg"},
+            {"path": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-green05.jpg"}
+        ],
+        "imagesdms": "/data/DurableFurnitrues/Sofas/Fabric-Sofas/Durafu-FaSof02/June-Sofas-dimension.ashx",
+        "rating":"5",
+        "detail" : 
+            {   
+                "height": "81,5",
+                "width": "155 ",
+                "depth":"93,5",
+                "color":["white","beige","gray","yellow","green","red"],
+                "material":["Fabric, ","Steel, ","Aluminium, ","PUR foam"]
+            },
+        "files" : "null"
+
+    }
+    
+    
+]

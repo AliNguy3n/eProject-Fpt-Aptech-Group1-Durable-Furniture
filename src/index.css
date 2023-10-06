@@ -1,0 +1,17 @@
+@font-face {
+  font-family:"Roboto" ;
+  src: url(./stories/fonts/Exo-VariableFont_wght.woff2);
+}
+body {
+  margin: 0;
+  
+  font-family: -apple-system, BlinkMacSystemFont,'Roboto', sans-serif, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

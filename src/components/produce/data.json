@@ -1,0 +1,43 @@
+[
+    {
+        "no":1,
+        "id":"P01",
+        "img":"https://media.currys.biz/i/currysprod/10211769?$l-large$&fmt=auto",
+        "name": "Lenovo Chromebook",
+        "price":300,
+        "stock":"True"
+    },
+    {
+        "no":2,
+        "id":"P02",
+        "img":"https://media.currys.biz/i/currysprod/10211769?$l-large$&fmt=auto",
+        "name": "Acer Nitro",
+        "price":400,
+        "stock":"True"
+    },
+    {
+        "no":3,
+        "id":"P03",
+        "img":"https://media.currys.biz/i/currysprod/10211769?$l-large$&fmt=auto",
+        "name": "Apple Pencil",
+        "price":100,
+        "stock":"False"
+    },
+    {
+        "no":4,
+        "id":"P04",
+        "img":"https://media.currys.biz/i/currysprod/10211769?$l-large$&fmt=auto",
+        "name": "Google Chromecast",
+        "price":200,
+        "stock":"True"
+    },
+    {
+        "no":5,
+        "id":"P05",
+        "img":"../../assets/images/logomain.png",
+        "name": "Google Chromecast",
+        "price":230,
+        "stock":"False"
+    }
+    
+]

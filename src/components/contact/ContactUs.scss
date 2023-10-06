@@ -1,0 +1,52 @@
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &-wrapper{
+        max-width: 992px;
+        text-align: center;
+        &-info{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap ;
+           
+        }
+        &-content{
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            &-img{
+                width: 500px;
+                padding: 20px;
+            }
+        }
+    }
+}
+.text-input{
+    height: 2.5rem;
+    width: 27rem;
+    margin: 0.5rem;
+    outline:none;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+}
+.text-area{
+    height: 6rem;
+    width: 27rem;
+    margin: 0.5rem;
+    outline:none;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+}
+.submit-button{
+    height: 2.7rem;
+    outline:none;
+    background-color: rgba(234, 234, 234, 0.884);
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+    margin: 0.5rem;
+    width: 6rem;
+}

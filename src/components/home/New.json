@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Focus in Comfort​​​​​",
+        "content": "Harmonious combination of natural wood and fabric. Brings users comfort and friendliness.",
+        "img" : "/images/newsImages/slidenew1.jpg",
+        "path" : "/"
+    },
+    {
+        "id": 2,
+        "title": "Seamless Luxury",
+        "content": "A style composed of minimalist lines, harmonious colours, sophisticated materials and precious details.",
+        "img" : "/images/newsImages/slidenew2.jpg",
+        "path" : "/"
+    },
+    {
+        "id": 3,
+        "title": "Hybrid in Harmony​​​​",
+        "content": "Space, technology, furniture and lighting in harmony for a better hybrid collaboration experience.",
+        "img" : "/images/newsImages/slidenew3.jpg",
+        "path" : "/"
+    },
+    {
+        "id": 4,
+        "title": "Gentle style",
+        "content": "Durable Furnitures range of soft furnishings, lighting and accessories has options to suit every taste where style.",
+        "img" : "/images/newsImages/slidenew4.jpg",
+        "path" : "/"
+    }
+]

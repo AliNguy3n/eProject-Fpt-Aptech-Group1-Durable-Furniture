@@ -1,0 +1,28 @@
+
+[
+    { "id": 1,
+      "image":"/images/slideimg1.jpg",
+      "title": "High-quality furniture",
+      "content": "We provide quality products at an affordable price."
+      },
+    { "id": 2,
+      "image":"/images/slideimg2.jpg",
+      "title": "Tinh tế trong sự đơn giản",
+      "content": "Vẻ đẹp của sự đơn giản nhưng tỉ mỉ trong từng chi tiết .<br> Bận nên chưa dịch sang tiếng anh được. "
+      },
+    { "id": 3,
+      "image":"/images/slideimg3.jpg",
+      "title": "High-quality furniture",
+      "content": "We provide quality products at an affordable price."
+      },
+    { "id": 4,
+      "image":"/images/slideimg4.jpg",
+      "title": "Thân thiện với môi trường",
+      "content": "Sản phẩm của chúng tôi thân thiện với môi trường và người tiêu dùng"
+      },
+    { "id": 5,
+      "image":"/images/slideimg5.jpg",
+      "title": "High-quality furniture",
+      "content": "We provide quality products at an affordable price."
+      }
+    ]
