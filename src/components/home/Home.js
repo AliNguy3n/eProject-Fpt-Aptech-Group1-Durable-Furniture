@@ -5,7 +5,7 @@ import BestSellers from './BestSellers'
 import New from './New'
 import Discover from './Discover'
 
-function Home({handleAddComp}) {
+function Home({handleAddComp,handleCarts}) {
   return (
     <div className='home'>
       <div className="home-preview">
@@ -13,7 +13,7 @@ function Home({handleAddComp}) {
       </div>
       
       <div className='home-content'>
-        <BestSellers handleAddComp={handleAddComp}/>
+        <BestSellers handleAddComp={handleAddComp} handleCarts={handleCarts}/>
         <New />
         <Discover/>
 

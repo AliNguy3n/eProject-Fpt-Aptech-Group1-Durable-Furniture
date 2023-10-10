@@ -6,12 +6,7 @@ import prev from '../../../stories/icons/previous.png'
 import next from '../../../stories/icons/next.png'
 
 function SliderProducts(props) {
-    const slider  = props.imagesPreview;
-    
-    console.log("Du lieu slides:",slider)
-    
-    
-    
+    const slider  = props.imagesPreview;  
     const [slidercurrent, setSlidercurrent] = useState(0);
     const sliderlength = slider.length
     const handleNext = () =>{

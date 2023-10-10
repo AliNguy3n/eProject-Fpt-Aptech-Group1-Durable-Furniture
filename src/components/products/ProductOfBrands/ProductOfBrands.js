@@ -1,23 +1,57 @@
 import React from 'react'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import './ProductOfBrands.scss'
-import '../ProductDetailsCard/ProductDetailsItems'
 import ProductDetailsItems from '../ProductDetailsCard/ProductDetailsItems'
 import SearchBox from '../SearchBox/SearchBox'
-
 import ProductMix from '../Products/ProductMix.json'
 import Products from '../Products/Products.json'
+import Pagination from '../../Pagination/Pagination'
 import ProductBanner01 from '../../../assets/images/ProductOfBrands/DarableFurnitureBanner.png'
+import ProductBanner02 from '../../../assets/images/ProductOfBrands/AshleyBanner.png'
+import ProductBanner03 from '../../../assets/images/ProductOfBrands/Rowbanner.png'
 
-function ProductOfBrands() {
-  const {id} = useParams();
-  console.log('gia tri cua id Params:',id)
+
+function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
+  const Keyparam = useParams();
+  const  Productsdata = (Keyparam.id === undefined ? Products : Products.filter( temp => temp.brand.id == Keyparam.id));
+
+  
+  const [searchkey, setSearchKey] = useState()  
+  
+  const [sortKey, setSortKey] =useState('');
+
+  const [ categoriesCheckkey, setCategoriesCheckkey] =useState([
+    {id:1, name:"Conference Tables", checked: false},
+    {id:2, name:"Collaborative Tables", checked: false},
+    {id:3, name:"Occasional Tables", checked: false},
+    {id:4, name:"Outdoor Tables", checked: false},
+    {id:5, name:"Shade Tables", checked: false},
+    {id:6, name:"Armchairs", checked: false},
+    {id:7, name:"Side Chairs", checked: false},
+    {id:8, name:"Guest Chairs", checked: false},
+    {id:9, name:"Conference Chairs", checked: false},
+    {id:10, name:"Stools", checked: false},
+    {id:11, name:"Lounge Chairs", checked: false},
+    {id:12, name:"Outdoor Seating", checked: false},
+    {id:13, name:"Benches", checked: false},
+    {id:14, name:"Sofa Beds", checked: false},
+    {id:15, name:"Fabric Sofas", checked: false},
+    {id:16, name:"Leather Sofas", checked: false},
+    {id:17, name:"Modular Sofas", checked: false},
+    {id:18, name:"Chaise Longues", checked: false},
+    {id:19, name:"Cabinets", checked: false},
+    {id:20, name:"Wardrobes", checked: false},
+    {id:21, name:"Cupboards", checked: false},
+    {id:22, name:"Bookcases", checked: false},
+    {id:23, name:"Shelvings", checked: false},
+    {id:24, name:"TV Benches", checked: false},
+  ])
+  
+
   const ProductList = Object.entries(ProductMix);
   let accordion = [];
-  const [searchkey, setSearchkey] = useState();
-  let ProductsofBrand = Products.filter((items) => items.brand.id ===id)
- 
+  
   Object.entries(ProductList).map((items,index)=>{
     return(accordion[index] = false)
   })
@@ -35,30 +69,107 @@ function ProductOfBrands() {
   }
 
   
-  let handleSearchkey = (value) =>{
-    setSearchkey(value.Name);
+
+  let handleCheckCategories =(id) =>{
+    let updatecategories = categoriesCheckkey.map((item,index) =>{
+      if(item.id === id){
+        return{...item, checked : !item.checked}
+      }else{ return item}
+    });
+    setCategoriesCheckkey(updatecategories);
+  }
+
+
+  let keysortCategories = categoriesCheckkey.filter((item) => item.checked === true).map((item)=> {return(item.name)})
+  let handleSeachKey = (SKey) =>{
+    setSearchKey(SKey);
+    console.log('Gia tri cua Skey',SKey)
   }
   
+  let sortData = (datainput) =>{
+
+    let datasort1 = datainput.filter((item) =>{
+      if( keysortCategories.length === 0){
+        return true
+      } else{
+        return keysortCategories.includes(item.categories.name)
+      }
+    })
+    
+  
+   let datasort2 =[];
+   switch(sortKey){
+      case 'Most Popular' :
+         datasort2 = datasort1.sort((item1 ,item2) => item1.top -item2.top);
+        break;
+      case 'Rating' :
+        datasort2 = datasort1.sort((item1 ,item2) => item2.rating -item1.rating);
+        break;
+      case 'Price Ascending' :
+        datasort2 = datasort1.sort((item1 ,item2) => item1.price -item2.price);
+        break;
+      case 'Price Descending' :
+        datasort2 = datasort1.sort((item1 ,item2) => item2.price -item1.price);
+        break;
+      default:
+         datasort2 = datasort1;
+        
+   }
+   let datasort3 = datasort2.filter((item) =>{
+    
+    if(searchkey === undefined || searchkey ===''){
+      console.log('Tham Chieu1',searchkey === undefined )
+      return item}
+      else{
+          let newdata = item.name.toLowerCase()
+          return newdata.includes(searchkey)
+      }
+    });
+
+    return datasort3
+  }
+  let ProductData1 = sortData(Productsdata) ;
+
+  
+
+  const PER_PAGE = 6;
+  const [currentPage, setcurrentPage] =useState(0);
+  const handlePageClick = ({selected: selecTedPage}) =>{
+    setcurrentPage(selecTedPage)
+  }
+  const offset = currentPage * PER_PAGE;
+  const currentPageData = ProductData1.slice(offset, offset +PER_PAGE);
+  const pageCount = Math.ceil( Productsdata.length / PER_PAGE);
   return (
     <div className='productsbrandpage'>
         <div className='productsbrandpage-banner'>
-          <img src={ProductBanner01} alt="banner01" className='productsbrandpage-banner-img'/>
+          <img src={Keyparam.id === '1'  ? ProductBanner01: (Keyparam.id === '2' ? ProductBanner02 : (Keyparam.id === '3' ? ProductBanner03: ProductBanner01))} alt="banner01" className='productsbrandpage-banner-img'/>
           <div className='productsbrandpage-banner-title'>
-            <h1>DURABLE FURNITURES</h1>
+            <h1>{Productsdata[0].brand.name.toLocaleUpperCase()}</h1>
             <h3>TIMELESS ELEGANCE</h3>
             <h5>A style composed of minimalist lines, harmonious colours, sophisticated materials and   precious details, in the firm belief that the quality of style improves the living experience.</h5>
           </div>
         </div>
         <div className='productsbrandpage-control'>
           <div className='productsbrandpage-control-left'>
-            <SearchBox/>
+          <SearchBox handleSeachKey={handleSeachKey}/>
           </div>
           <div className='productsbrandpage-control-center'>
-            <p>{searchkey}</p>
+            {categoriesCheckkey.map((item,index)=>{
+              if(item.checked === true){
+                return(
+                  <div key= {index}>
+                    <p>{item.name}</p>
+                  </div>
+                )
+              }
+              else{return null}
+            })}
+          {searchkey === undefined ? null : <div><p>{searchkey}</p></div>  } 
           </div>
           <div className='productsbrandpage-control-right'>
             <label htmlFor="">Sort by:&nbsp;</label>
-              <select name="select" id="select01">
+            <select name="select" id="select01" onChange={(event) =>setSortKey(event.target.value)} >
                 <option value="Most Popular">Most Popular</option>
                 <option value="New">New</option>
                 <option value="Rating">Rating</option>
@@ -85,7 +196,7 @@ function ProductOfBrands() {
                   return(
                     <div className= 'accordionMenu-item-content-open-container' key={indicator}>
                       <p>{temp.Name}</p>
-                      <input type="checkbox" name={temp.Name} id={temp.Name} value={temp.Name} onChange={() =>handleSearchkey(temp)}/>
+                      <input type="checkbox" name={temp.Name} id={temp.Name} value={temp.Name} onClick={()=>handleCheckCategories(temp.id)} defaultChecked={categoriesCheckkey[index].checked} />
                     </div>
                 
                   )})}
@@ -99,18 +210,20 @@ function ProductOfBrands() {
       </div>
           </div>
           <div className='productsbrandpage-main-container'>
-            {ProductsofBrand.map((items, index) =>{
+            {currentPageData.map((items, index) =>{
               return(
                 <div className='productsbrandpage-main-container-items' key={index}>
-                    <ProductDetailsItems id={items.id} name={items.name} categories={items.categories.name} 
+                    <ProductDetailsItems id={items.id} name={items.name} categories={items.categories.name} colorstate ={items.detail.color[0]}
                       price={items.price} status={items.status} brand={items.brand.name}
                       images={items.imagesPreview[0].path} rating={items.rating}
+                      handleAddComp={handleAddComp} handleCarts={handleCarts} searchProduct={searchProduct}
                     />
                 </div>
 
               )
             })}
-            <div className='productsbrandpage-main-container-items'>
+            <div className='productsbrandpage-main-container-page'>
+              <Pagination pageCount={pageCount} handlePageClick={handlePageClick} />
             </div>
           </div>
 

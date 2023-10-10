@@ -21,7 +21,7 @@ function NavMain() {
                 <NavLink to="/" className={(navData) => (navData.isActive ? "active-style" : 'none')}  style={{color: location ==='/'?'': '#515151'}}>Home</NavLink>
             </li>
             <li className="nav-main-ul-li">
-                <NavLink to="/products" className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Product List &nbsp;
+                <NavLink to="products" className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Product List &nbsp;
                 <i className="fa-solid fa-chevron-down icon-style"></i>
                 </NavLink>
                 <div className="nav-main-ul-li-dropdown" >
@@ -33,7 +33,7 @@ function NavMain() {
                         {menulist.Tables.map((items,index) => {
                           return (
                             <li key = {items.id} className='nav-main-ul-li-dropdown-sub-items' >
-                              <Link to={items.path} className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              <Link to={`products/${items.id}`}  className='nav-main-ul-li-dropdown-sub-items'> {items.Name}</Link>
                             </li>
                           )
                         } )}
@@ -46,7 +46,7 @@ function NavMain() {
                         {menulist.Chairs.map((items,index) => {
                           return (
                             <li key = {items.id} className='nav-main-ul-li-dropdown-sub-items' >
-                              <Link to={items.path} className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              <Link to={`products/${items.id}`}  className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
                             </li>
                           )
                         } )}
@@ -59,7 +59,7 @@ function NavMain() {
                         {menulist.Sofas.map((items,index) => {
                           return (
                             <li key = {items.id} className='nav-main-ul-li-dropdown-sub-items' >
-                              <Link to={items.path} className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              <Link to={`products/${items.id}`}  className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
                             </li>
                           )
                         } )}
@@ -72,7 +72,7 @@ function NavMain() {
                         {menulist.Storage.map((items,index) => {
                           return (
                             <li key = {items.id} className='nav-main-ul-li-dropdown-sub-items' >
-                              <Link to={items.path} className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              <Link to={`products/${items.id}`} className='nav-main-ul-li-dropdown-sub-items'>  {items.Name}</Link>
                             </li>
                           )
                         } )}
@@ -85,7 +85,7 @@ function NavMain() {
                 
             </li>
             <li className="nav-main-ul-li">
-                <NavLink to="/brands" className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Brands &nbsp;
+                <NavLink to="brands/1" className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Brands &nbsp;
                   <i className="fa-solid fa-chevron-down icon-style"></i>
                 </NavLink>
                 <div className="nav-main-ul-li-dropdown"  >
@@ -95,7 +95,7 @@ function NavMain() {
                         {BrandList.map((items,index) => {
                           return (
                             <li key = {items.id} className='nav-main-ul-li-dropdown-sub-items' >
-                              <Link to={items.path} className='nav-main-ul-li-dropdown-sub-items' >  {items.Name}</Link>
+                              <Link to={`brands/${items.id}`} className='nav-main-ul-li-dropdown-sub-items' >  {items.Name}</Link>
                             </li>
                           )
                         } )}
@@ -105,11 +105,9 @@ function NavMain() {
                   </ul>
                 </div>
             </li>
+            
             <li className="nav-main-ul-li">
-                <NavLink to="/new" className={(navData) => (navData.isActive ? "active-style" : 'none')}style={{color: location ==='/'?'': '#515151'}}>New</NavLink>
-            </li>
-            <li className="nav-main-ul-li">
-                <NavLink to="/services"className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Services</NavLink>
+                <NavLink to="services"className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Services</NavLink>
             </li>
             <li className="nav-main-ul-li">
                 <NavLink to="/contact" className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Contact</NavLink>
@@ -121,7 +119,100 @@ function NavMain() {
                 <NavLink to="/compare" className={(navData) => (navData.isActive ? "active-style" : 'none')} style={{color: location ==='/'?'': '#515151'}}>Compare</NavLink>
             </li>
         </ul>
-        
+      {/* for mobie */}
+        <div className="nav-main-mobile">
+        <ul className="nav-main-mobile-ul">
+              <li className="nav-main-mobile-ul-li">
+                  <NavLink to="/" className={(navData) => (navData.isActive ? "active-style" :  'none')}  style={{color: location ==='/'?'': '#515151'}}>Home</NavLink>
+              </li>
+              <li className="nav-main-mobile-ul-li">
+                  <NavLink to="products" className={(navData) => (navData.isActive ? "active-style" :   'none')} style={{color: location ==='/'?'': '#515151'}}>Product List &nbsp;
+                  <i className="fa-solid fa-chevron-down icon-style"></i>
+                  </NavLink>
+                  <div className="nav-main-mobile-ul-li-dropdown" >
+                    <ul className="nav-main-mobile-ul-li-dropdown-sub">
+                      <li className="nav-main-mobile-ul-li-dropdown-sub-list">
+                        <img src={tableicon} alt="table" className='iconitems' /> 
+                        <span> Tables</span>
+                        <ul className="nav-main-mobile-ul-li-dropdown-sub-list" >
+                          {menulist.Tables.map((items,index) => {
+                            return (
+                              <li key = {items.id} className='nav-main-mobile-ul-li-dropdown-sub-items' >
+                                <Link to={`products/${items.id}`}   className='nav-main-mobile-ul-li-dropdown-sub-items'> {items.Name}</Link>
+                              </li>
+                            )
+                          } )}
+                        </ul>
+                      </li>
+                      <li className="nav-main-mobile-ul-li-dropdown-sub-list">
+                        <img src={chairicon} alt="table" className='iconitems' /> 
+                        <span> Chairs</span>
+                        <ul className="nav-main-mobile-ul-li-dropdown-sub-list" >
+                          {menulist.Chairs.map((items,index) => {
+                            return (
+                              <li key = {items.id} className='nav-main-mobile-ul-li-dropdown-sub-items' >
+                                <Link to={`products/${items.id}`}   className='nav-main-mobile-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              </li>
+                            )
+                          } )}
+                        </ul>
+                      </li>
+                      <li className="nav-main-mobile-ul-li-dropdown-sub-list">
+                        <img src={sofaicon} alt="sofa" className='iconitems' /> 
+                        <span> Sofas</span>
+                        <ul className="nav-main-mobile-ul-li-dropdown-sub-list" >
+                          {menulist.Sofas.map((items,index) => {
+                            return (
+                              <li key = {items.id} className='nav-main-mobile-ul-li-dropdown-sub-items' >
+                                <Link to={`products/${items.id}`}   className='nav-main-mobile-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              </li>
+                            )
+                          } )}
+                        </ul>
+                      </li>
+                      <li className="nav-main-mobile-ul-li-dropdown-sub-list">
+                        <img src={storageicon} alt="sofa" className='iconitems' /> 
+                        <span> Storage</span>
+                        <ul className="nav-main-mobile-ul-li-dropdown-sub-list" >
+                          {menulist.Storage.map((items,index) => {
+                            return (
+                              <li key = {items.id} className='nav-main-mobile-ul-li-dropdown-sub-items' >
+                                <Link to={`products/${items.id}`}   className='nav-main-mobile-ul-li-dropdown-sub-items'>  {items.Name}</Link>
+                              </li>
+                            )
+                          } )}
+                        </ul>
+                      </li>
+                        
+                    </ul>
+
+                  </div>
+                        
+              </li>
+              <li className="nav-main-mobile-ul-li">
+                  <NavLink to="brands/1" className={(navData) => (navData.isActive ? "active-style" :   'none')} style={{color: location ==='/'?'': '#515151'}}>Brands &nbsp;
+                    <i className="fa-solid fa-chevron-down icon-style"></i>
+                  </NavLink>
+                  <div className="nav-main-mobile-ul-li-dropdown"  >
+                    <ul className="nav-main-mobile-ul-li-dropdown-sub"  style={{maxWidth:'fit-content'}}>
+                    <li className="nav-main-mobile-ul-li-dropdown-sub-list" >
+                        <ul className="nav-main-mobile-ul-li-dropdown-sub-list" >
+                          {BrandList.map((items,index) => {
+                            return (
+                              <li key = {items.id} className='nav-main-mobile-ul-li-dropdown-sub-items' >
+                                <Link to={`brands/${items.id}`}   className='nav-main-mobile-ul-li-dropdown-sub-items' >  {items.Name}</Link>
+                              </li>
+                            )
+                          } )}
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+              </li>
+              
+          </ul>
+          </div>
       </nav>
     </div>
   )

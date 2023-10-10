@@ -3,7 +3,7 @@ import './BestSellers.scss'
 import Products from '../products/Products/Products.json'
 import ProductDetailsItems from '../products/ProductDetailsCard/ProductDetailsItems'
 import { Link } from 'react-router-dom'
-function BestSellers({handleAddComp}) {
+function BestSellers({handleAddComp,handleCarts}) {
     let topProducts = Products.filter((items) => items.top ==='1').slice(0,4);
   return (
     <div className='bestsaler'>
@@ -19,7 +19,7 @@ function BestSellers({handleAddComp}) {
                 return(
                     <div className='bestsaler-container-item' key={index}>
                         <ProductDetailsItems id={items.id} name={items.name} 
-                        price={items.price} status={items.status} brand={items.brand.name} images={items.imagesPreview[0].path} rating = {null} handleAddComp={handleAddComp}/>
+                        price={items.price} status={items.status} brand={items.brand.name} images={items.imagesPreview[0].path} rating = {null} handleAddComp={handleAddComp} handleCarts={handleCarts} colorstate ={items.detail.color[0]}/>
                     </div>
 
                 )

@@ -48,7 +48,7 @@
             max-height: 80vh;
             width: 100%;
             object-fit: cover;
-            animation: animatedImages  5s linear alternate;
+            animation: animatedImagesmain  7s linear alternate;
         }
         &-freezer{
             display: none;
@@ -140,7 +140,7 @@
     }
 
 }
-@keyframes animatedImages {
+@keyframes animatedImagesmain {
     0% {
       scale: 112%;
       opacity: 0.8;

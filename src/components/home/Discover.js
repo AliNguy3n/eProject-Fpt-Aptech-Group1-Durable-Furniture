@@ -19,7 +19,7 @@ function Discover() {
           <div className="discover1-content">
             <h4 className="discover1-content-title-h4">Modern & Youthful Style</h4>
             <p className="discover1-content-paragraph">Stylish, modern and youthful - the collection is a   <br></br> combination of wood, leather, fabric with<br></br> the main highlight being gray  painted<br></br> metal to make the space more attractive<br></br> and personal, suitable for   modern life.<br></br>
-            <Link>More...</Link>
+            <Link to="brands/4">More...</Link>
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ function Discover() {
           <div className="discover2-content">
             <h4 className="discover2-content-title-h4">Love Of Nature And The Charm Of Wood</h4>
             <p className="discover2-content-paragraph">The rustic and luxurious design is extremely unique. <br></br> Oak wood is used as the main component of the collection.<br></br> Bringing a warm   and elegant color scheme, this type of wood<br></br> contributes to making the living space   more cozy, <br></br>closer and more lively, creating cohesion for family members. <br />
-            <Link>More...</Link>
+            <Link to="brands/2">More...</Link>
             </p>
             
           </div>

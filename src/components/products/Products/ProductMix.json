@@ -1,34 +1,34 @@
 {
     "Tables" : [
-      {"id": "1", "Name": "Conference Tables", "path": "/conference-tables"},
-      {"id": "2", "Name": "Collaborative Tables", "path": "/collaborative-tables"},
-      {"id": "3", "Name": "Occasional Tables", "path": "/occasional-tables"},
-      {"id": "4", "Name": "Outdoor Tables", "path": "/outdoor-tables"},
-      {"id": "5", "Name": "Shade Tables", "path": "/shade-tables"}
+      {"id": 1, "Name": "Conference Tables", "path": "products/1"},
+      {"id": 2, "Name": "Collaborative Tables", "path": "products/2"},
+      {"id": 3, "Name": "Occasional Tables", "path": "products/3"},
+      {"id": 4, "Name": "Outdoor Tables", "path": "products/4"},
+      {"id": 5, "Name": "Shade Tables", "path": "products/5"}
     ],
    "Chairs" : [
-      {"id": "6", "Name": "Armchairs", "path": "/armchairs"},
-      {"id": "7", "Name": "Side Chairs", "path": "/side-chairs"},
-      {"id": "8", "Name": "Guest Chairs", "path": "/guest-chairs"},
-      {"id": "9", "Name": "Conference Chairs", "path": "/conference-chairs"},
-      {"id": "10", "Name": "Stools", "path": "/stools"},
-      {"id": "11", "Name": "Lounge Chairs", "path": "/lounge-chairs"},
-      {"id": "12", "Name": "Outdoor Seating", "path": "/outdoor-seating"},
-      {"id": "13", "Name": "Benches", "path": "/benches"}
+      {"id": 6, "Name": "Armchairs", "path": "products/6"},
+      {"id": 7, "Name": "Side Chairs", "path": "products/7"},
+      {"id": 8, "Name": "Guest Chairs", "path": "products/8"},
+      {"id": 9, "Name": "Conference Chairs", "path": "products/9"},
+      {"id": 10, "Name": "Stools", "path": "products/10"},
+      {"id": 11, "Name": "Lounge Chairs", "path": "products/11"},
+      {"id": 12, "Name": "Outdoor Seating", "path": "products/12"},
+      {"id": 13, "Name": "Benches", "path": "products/13"}
     ],
     "Sofas" : [
-      {"id": "14", "Name": "Sofa Beds", "path": "/sofa-beds"},
-      {"id": "15", "Name": "Fabric Sofas", "path": "/fabric-sofas"},
-      {"id": "16", "Name": "Leather Sofas", "path": "/leather-sofas"},
-      {"id": "17", "Name": "Modular Sofas", "path": "/modular-sofas"},
-      {"id": "18", "Name": "Chaise Longues", "path": "/chaise-longues"}
+      {"id": 14, "Name": "Sofa Beds", "path": "products/14"},
+      {"id": 15, "Name": "Fabric Sofas", "path": "products/15"},
+      {"id": 16, "Name": "Leather Sofas", "path": "products/16"},
+      {"id": 17, "Name": "Modular Sofas", "path": "products/17"},
+      {"id": 18, "Name": "Chaise Longues", "path": "products/18"}
     ],
     "Storage" : [
-      {"id": "19", "Name": "Cabinets", "path": "/cabinets"},
-      {"id": "20", "Name": "Wardrobes", "path": "/cupboards"},
-      {"id": "21", "Name": "Cupboards", "path": "/cupboards"},
-      {"id": "22", "Name": "Bookcases", "path": "/bookcases"},
-      {"id": "23", "Name": "Shelvings", "path": "/shelvings"},
-      {"id": "24", "Name": "TV Benches", "path": "/tv-benches"}
+      {"id": 19, "Name": "Cabinets", "path": "products/19"},
+      {"id": 20, "Name": "Wardrobes", "path": "products/20"},
+      {"id": 21, "Name": "Cupboards", "path": "products/21"},
+      {"id": 22, "Name": "Bookcases", "path": "products/22"},
+      {"id": 23, "Name": "Shelvings", "path": "products/23"},
+      {"id": 24, "Name": "TV Benches", "path": "products/24"}
     ]
   }

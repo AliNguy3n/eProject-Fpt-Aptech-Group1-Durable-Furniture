@@ -61,7 +61,8 @@
             text-decoration: none;
         }
         :hover{
-            color: #2846a8;
+            color: #ffffff;
+            background-color: #00d3a2;
         }
         &-details{
             height: 28px;
@@ -89,6 +90,7 @@
         &-p{
             font-size: 14px;
             font-weight: 600;
+            display:contents;
         }
         &-icon{
             margin: 3px;

@@ -1,18 +1,22 @@
 import React from "react";
 import './Search.scss'
-import { useLocation } from 'react-router-dom';
-function Search() {
-  let location = useLocation().pathname;
-    const handleSearch = (event) =>{
+import { Link, useLocation } from 'react-router-dom';
 
-        alert('Web mới làm! Có cái nịt gì đâu mà Seach.!');
-    }
+function Search({handleSeachProduct}) {
+  let location = useLocation().pathname;
+  
+ 
   return (
     <div className="search">
+      <form action="">
       <label htmlFor="">
-        <input type="text" className="input-style" />
-        <button className="button-style" onClick={(event)=>handleSearch(event)} style={{color: location ==='/'?'': '#515151'}}>Search</button>
+          <input type="text" className="input-style" disabled={location ==='/'? false: true} onChange={(event) =>handleSeachProduct(event.target.value)} />
+          <Link to='products'>
+            <input type="reset" value="Search"  className="button-style"   style={{color: location ==='/' ? '': '#515151'}}/>
+          </Link>
+          
       </label>
+      </form>
     </div>
   );
 }

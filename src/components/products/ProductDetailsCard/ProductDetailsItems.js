@@ -8,6 +8,7 @@ import compareicon from '../../../stories/icons/compare.png'
 
 function ProductDetailsItems(props) {
   const item = props;
+
   return (
     <div className='productdetails'>
       <div className='productdetails-avatar'>
@@ -35,10 +36,11 @@ function ProductDetailsItems(props) {
           </button>
         </Link>
         <button className='productdetails-button-addToCart'>
-        <p  className='productdetails-button-p'>Add To Cart</p>
+        <p  className='productdetails-button-p' onClick={() =>props.handleCarts({id:`${item.id}`,name:`${item.name}`,numberProduct:1,imgPreview:{path:`${item.images}`},price:`${item.price}`,colorstate:`${item.colorstate}`})}>Add To Cart</p>
           <img src={carticon} alt="carticon" className='productdetails-button-icon' />
         </button>
         <button className='productdetails-button-addToCart' onClick={()=>props.handleAddComp(item.id)}>
+
         <p  className='productdetails-button-p'>Compare</p>
           <img src={compareicon} alt="compareicon" className='productdetails-button-icon' />
         </button>

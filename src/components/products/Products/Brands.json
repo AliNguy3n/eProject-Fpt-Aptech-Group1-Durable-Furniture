@@ -2,23 +2,23 @@
     {
         "id": 1,
         "Name":"Durable Funitures",
-        "path":"/brands/1"
+        "path":"brands/1"
 
     },
     {
         "id": 2,
         "Name":"Ashley Furniture",
-        "path":"/brands/2"
+        "path":"brands/2"
     },
     {
         "id": 3,
         "Name":"Aron Furniture",
-        "path":"/brands/3"
+        "path":"brands/3"
     },
     {
         "id": 4,
         "Name":"Row Furniture",
-        "path":"/brands/4"
+        "path":"brands/4"
     }
 
 ]

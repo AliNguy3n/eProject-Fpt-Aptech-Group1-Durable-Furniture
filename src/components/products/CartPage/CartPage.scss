@@ -1,0 +1,142 @@
+$border-table-color: #ffffff80;
+.cartpage{
+    width: 100%;
+    min-height: 50vh ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.banner{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left:7vw;
+    h1{
+        margin-right: 4rem;
+    }
+    img{
+        height: 10rem;
+        width: auto;
+        
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    table{
+        width: 80%;
+        border-collapse:collapse;
+        text-align: left  ;
+        border-radius: 7px;
+        overflow: hidden;
+        
+    }
+    th{
+        border: 1px solid $border-table-color;
+        padding: 1.4rem;
+        background-color: #6c7ae0;
+        color: rgb(255, 255, 255);
+        margin: 1px;
+    }
+    tr{
+        border: 1px solid $border-table-color;   
+        text-align: center;
+    }
+    td{
+        border: 1px solid $border-table-color; 
+        padding: 6px;  
+        text-align: center;
+    }
+    tr:nth-child(even) {background-color: #ffffff;}
+    tr:nth-child(odd) {background-color: #f8f6fe;}
+    img{
+        max-height: 9rem;
+        max-width: 9rem;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+    &-numbers{
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 2.2rem;
+        border: 1px solid rgb(210, 210, 210);
+        border-radius: 5px;
+        width: 6rem;
+        h4{
+            margin: auto;
+            font-size: 1.1rem;
+            width: 1.5rem;
+            text-align: center;
+        }
+        button{
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            height: 100%;
+            width: 2rem;
+        }
+    }
+    &-wrapper{
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &-info{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap ;
+           
+        }
+        &-content{
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            &-img{
+                width: 500px;
+                padding: 20px;
+            }
+        }
+    }
+}
+.submit{
+    button{
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #636363;
+        a:hover{
+            background-color: #7785f3;
+        }
+    }
+    
+}
+.cart-text-input{
+    height: 2.5rem;
+    width: 22rem;
+    margin: 0.5rem;
+    outline:none;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+}
+.cart-text-area{
+    height: 3rem;
+    width: 22rem;
+    margin: 0.5rem;
+    outline:none;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+}

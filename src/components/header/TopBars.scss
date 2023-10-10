@@ -44,8 +44,19 @@
             
         }
         &-cart{
-            color: red;
-            
+            position: relative;
+           &-index{
+                position: absolute;
+                top:0;
+                right:4px;
+                transform: translateY(-50%);
+               
+                p{
+                    color:#ff4530;
+                    font-weight: 700;
+                    
+            }
+           }
         }
     }
     .icon{
@@ -57,5 +68,11 @@
     .cart{
         color: $text-color-bar-main;
         font-size: 22px;
+        
+    }
+}
+@media (max-width:768px){
+    .top-bar-center{
+        visibility: hidden;
     }
 }

@@ -93,6 +93,14 @@
                 padding: 15px;
                 text-align: center;
             }
+            &-page{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: 1/4;
+
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './SlideShowHome.scss';
 import slideData from './slideData.json' ;
 import prev from '../../stories/icons/previous.png'
@@ -15,12 +15,12 @@ function SlideShowHome() {
     const handlePrev = () =>{
         setSlidecurrent(slidecurrent === 0 ? slideslength -1 : slidecurrent -1)
     }
-    // useEffect(()=>{
-    //   const interval = setInterval(()=> {
-    //     setSlidecurrent(slidecurrent === slideslength - 1 ? 0 : slidecurrent + 1)
-    // },4000 );
-    //   return ()=> clearInterval(interval);
-    // },[slidecurrent]);
+    useEffect(()=>{
+      const interval = setInterval(()=> {
+        setSlidecurrent(slidecurrent === slideslength - 1 ? 0 : slidecurrent + 1)
+    },5000 );
+      return () => clearInterval(interval);
+    },[slidecurrent]);
   
   return (
     <div className='slides' >

@@ -5,12 +5,15 @@ import { useParams } from 'react-router-dom'
 import Products from '../Products/Products.json'
 import SliderProducts from '../SliderProducts/SliderProducts'
 
-function ProductDetailPage() {
-  console.log(Products)
+function ProductDetailPage({handleCarts}) {
   const data = Products;
-  const {id} = useParams();
-  let item = data.filter((item) => item.id ===id)
-  console.log('du lieu cua product',item[0].detail.color)
+  const keypara = useParams();
+  const id = keypara.id;
+  console.log('gia tri id item', typeof keypara.id)
+  let item = data.filter((item) => item.id === parseInt(keypara.id))
+  let imgPreview = item[0].imagesPreview[0];
+  let name = item[0].name;
+  let price = item[0].price;
   const [colorstate, setColorstate] = useState('');
   const [numberProduct, setNumberProduct] = useState(1)
   let handleColor = (color) =>{
@@ -27,9 +30,14 @@ function ProductDetailPage() {
     }
   }
   let handleAddCart = () =>{
-    alert("Đã Thêm " + numberProduct +" Sản Phẩm Vào Giỏ Hàng")
+
+    if(colorstate.length === 0 || numberProduct === 0){
+      return(
+        alert("Please add quantity or color of Products")
+      ) 
+    }else (handleCarts({id,name,colorstate,numberProduct,imgPreview,price}))
+
   }
-  console.log('gia tri cua slidethubnail',colorstate)
   return (
     <div className='product-detail-page'>
       <div className="detail-container">
@@ -41,7 +49,7 @@ function ProductDetailPage() {
         <div className='slideshowthumbnail'>
           {item[0].imagesPreview.map((temp,ind) =>{
             return(
-              <div className='slideshowthumbnail-items' style={{backgroundImage: `url("${temp.path}")`}}>
+              <div className='slideshowthumbnail-items' style={{backgroundImage: `url("${temp.path}")`}} key={ind}>
               </div>
             )
           })}
@@ -51,11 +59,12 @@ function ProductDetailPage() {
           <h2>{item[0].name}</h2>
           <h4>Design by {item[0].brand.name}</h4>
           <h5>Model: {item[0].model}</h5>
-          <h5>Choose Color:</h5>
+          <h5>Choose Color:&nbsp;{`${colorstate}`.toUpperCase()}</h5>
           <div className='content-bar-color'>
            
             {item[0].detail.color.map((items,index)=>{
-                let color ="content-bar-color-item-"+`${items}`;
+                let colorbase = "content-bar-color-item-";
+                let color = colorbase.concat(`${items}`);
               return(
                 <div style={{border: items === colorstate && "2px solid blue"}} key={index} >
                   <div className={color}  style={{border:"red"}} >
@@ -82,8 +91,8 @@ function ProductDetailPage() {
               </div>
 
           </div>
-          <Link to="/data/DurableFurnitrues/Chairs/Armchairs/Egg_dura.pdf" target="_blank" download>Download Information Product &emsp;
-          <i class="fa-solid fa-download"></i>
+          <Link to={item[0].files} target="_blank" download>Download Information Product &emsp;
+          <i className="fa-solid fa-download"></i>
           </Link>
         </div>
         <div className='about-product'>
@@ -94,6 +103,7 @@ function ProductDetailPage() {
           <img src={item[0].images[1].path} alt="" />
 
         </div>
+        
         <div className="dimensions">
           <h2>Dimension</h2>
           <img src={item[0].imagesdms} alt="dim" />

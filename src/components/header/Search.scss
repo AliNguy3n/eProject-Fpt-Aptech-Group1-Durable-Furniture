@@ -1,7 +1,9 @@
 @import '../../styles/VariableStyle.scss';
 $seach-color-main:#f0f2f5;
 .search{
-    width: 70%;
+    width: auto;
+    
+    
     .input-style{
         height: 30px;
         width: 50%;
@@ -27,6 +29,11 @@ $seach-color-main:#f0f2f5;
         padding: 4px;
         color: $text-color-bar-main;
         font-size: 16px;
+        
+        a{
+            color: $text-color-bar-main;
+            text-decoration: none;
+        }
     }
     
 }

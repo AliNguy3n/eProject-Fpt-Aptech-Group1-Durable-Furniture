@@ -1,0 +1,100 @@
+.storesdura{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &-banner{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        &-cover{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.325);
+            z-index: 3;
+            opacity: 1;
+        }
+        &-img{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: -20%;
+            z-index: 1;
+        }
+        
+
+        h1{
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            color: aliceblue;
+        }
+    }
+    &-wrapper{
+        max-width: 992px;
+        text-align: center;
+        &-content{
+
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            &-img{
+                max-width: 500px;
+                padding: 20px 0px 20px 10px;
+            }
+            &-item{
+                width: 100%;
+                border: 1px solid rgb(240, 240, 240);
+                background-color: #fff;
+                border-radius: 7px;
+                padding: 0.4rem;
+                ul{
+                    margin-top: 1rem;
+                }
+                li{
+                    list-style: circle;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    &-wrapper1{
+        width: 80%;
+        text-align: center;
+        &-content1{
+            width: 100%;
+           
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            &-img{
+                max-width: 500px;
+                padding: 20px 0px 20px 10px;
+            }
+            &-item1{
+                width: 100%;
+                border: 1px solid rgb(240, 240, 240);
+                background-color: #fff;
+                border-radius: 7px;
+                padding: 0.4rem;
+                margin: 0.3rem;
+                ul{
+                    margin-top: 1rem;
+                }
+                li{
+                    list-style: circle;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

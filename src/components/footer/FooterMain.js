@@ -18,25 +18,25 @@ function FooterMain() {
      
     ],
     Services : [
-      {id : '1', info : 'Delivery Service', path :'/'},
-      {id : '2', info : 'Interior Design Service', path :'/'},
-      {id : '3', info : 'Online Planning Services', path :'/'},
-      {id : '4', info : 'In-store Planning Services', path :'/'},
-      {id : '5', info : 'Technology Support', path :'/'},
+      {id : '1', info : 'Delivery Service', path :"/DeliveryServices"},
+      {id : '2', info : 'Interior Design Service', path :"/InteriorDesignServices"},
+      {id : '3', info : 'Online Planning Services', path :"/OnlinePlanningServices"},
+      {id : '4', info : 'In-store Planning Services', path :"/In-storePlanningServices"},
+      {id : '5', info : 'Technology Support', path :"/TechnologySupport"},
       
     ],
     Help :[
-      {id : '1', info :'FAQ', path : '/'},
-      {id : '2', info :'Warranties', path : '/'},
-      {id : '3', info :'Feedback', path : '/'},
-      {id : '4', info :'Policy', path : '/'},
-      {id : '5', info :'Product Recalls', path : '/'},
+      {id : '1', info :'FAQ', path : 'faq'},
+      {id : '2', info :'Warranties', path : 'warranties'},
+      {id : '3', info :'Feedback', path : 'contact'},
+      {id : '4', info :'Policy', path : 'policy'},
+      {id : '5', info :'Product Recalls', path : 'product-recalls'},
     ],
     Social : [
-      {id : '1', info :'Facebook', path :'/', icon : facebook },
-      {id : '2', info :'Twitter' , path :'/', icon : twitter},
-      {id : '3', info :'Instagram', path: '/', icon: instagram},
-      {id : '4', info :'Pinterest', path: '/', icon: pinterest}
+      {id : '1', info :'Facebook', path :'https://www.facebook.com/', icon : facebook },
+      {id : '2', info :'Twitter' , path :'https://twitter.com/', icon : twitter},
+      {id : '3', info :'Instagram', path: 'https://www.instagram.com/', icon: instagram},
+      {id : '4', info :'Pinterest', path: 'https://www.pinterest.com/', icon: pinterest}
     ]
   }
   return (
@@ -116,7 +116,7 @@ function FooterMain() {
           </ul>
       </div>
       <div className="footer-copyright">
-        <p className='footer-copyright'>&copy; Copyright by Group 1 T1.2306 M0 Aptech, I am The Chief Architect of Website </p>
+        <p className='footer-copyright'>&copy; Copyright by Group 1 T1.2306 M0 Aptech, Ali Nguyen </p>
       </div>
     </div>
   )
