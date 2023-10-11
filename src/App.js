@@ -30,6 +30,7 @@ function App() {
   const [ comparison, setComparison] = useState('');
   const [ cart, setCart] = useState([]);
   const [ searchProduct, setSearchProduct ] =useState();
+ 
   console.log('Gia tri cua Seachr App',searchProduct)
   let handleDelComparison = (id)=>{
     const newcomparison = comparison.filter((temp) => temp.id !== id);

@@ -1,7 +1,11 @@
 import React from 'react'
 import './HelpofStoreStyle.scss'
 import imgbannerservices from '../../assets/images/ServicesImages/banner-main.jpg';
+import { useEffect } from 'react';
 function WarrantiesStore() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
   return (
     <div className='faqstore'>
         <div className='faqstore-banner'>

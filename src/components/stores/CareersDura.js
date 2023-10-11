@@ -1,7 +1,11 @@
 import React from 'react'
 import './StoresDura.scss'
 import image1 from '../../assets/images/Stores/storepage-banner.jpg'
+import { useEffect } from 'react'
 function CareersDura() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
     return (
         <div className='storesdura'>
             <div className="storesdura-banner">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './ProductDetaiPage.scss'
 import { useParams } from 'react-router-dom'
@@ -15,7 +15,10 @@ function ProductDetailPage({handleCarts}) {
   let name = item[0].name;
   let price = item[0].price;
   const [colorstate, setColorstate] = useState('');
-  const [numberProduct, setNumberProduct] = useState(1)
+  const [numberProduct, setNumberProduct] = useState(1);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
   let handleColor = (color) =>{
     setColorstate(color);
   }

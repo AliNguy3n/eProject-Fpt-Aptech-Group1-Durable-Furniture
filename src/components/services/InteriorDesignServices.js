@@ -1,7 +1,11 @@
 import React from 'react'
 import './Services.scss'
+import { useEffect } from 'react'
 
 function InteriorDesignServices() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
   return (
     <div className='services'>
         <h1>INTERIOR DESIGN SERVICE</h1>

@@ -1,8 +1,12 @@
 import React from 'react'
 import './SevicesMain.scss';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import imgbannerservices from '../../assets/images/ServicesImages/banner-main.jpg';
 function ServicesMain() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
   return (
     <div className='servicesmain'>
         <div className='servicesmain-banner'>

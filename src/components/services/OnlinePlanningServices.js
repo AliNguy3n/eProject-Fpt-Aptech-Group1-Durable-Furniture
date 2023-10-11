@@ -1,7 +1,10 @@
 import React from 'react'
 import './Services.scss'
-
+import { useEffect } from 'react'
 function OnlinePlanningServices() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
   return (
   <div className='services'>
     <img src='https://nhaxinh.com/wp-content/uploads/2023/05/nha-xinh-thiet-ke-noi-that-ecopark-16523.jpg' alt=''></img>

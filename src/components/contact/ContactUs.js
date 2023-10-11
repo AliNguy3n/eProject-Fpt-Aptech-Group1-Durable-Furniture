@@ -1,6 +1,10 @@
 import React from 'react'
 import './ContactUs.scss'
+import { useEffect } from 'react'
 function ContactUs() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
   return (
     <div className='contact'>
         <div className='contact-wrapper'>

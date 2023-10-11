@@ -1,7 +1,10 @@
 import React from 'react'
 import './Services.scss'
-
+import { useEffect } from 'react'
 function DeliveryServices() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
   return (
     
     <div className='services'>

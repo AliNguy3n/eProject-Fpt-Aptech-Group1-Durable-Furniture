@@ -4,9 +4,12 @@ import image1 from '../../assets/images/Stores/storepage-banner.jpg'
 import image2 from '../../assets/images/Stores/storepage2.jpg'
 import image3 from '../../assets/images/Stores/storepage.webp'
 import image4 from '../../assets/images/Stores/instores.jpg'
-
+import { useEffect } from 'react'
 
 function StoresDura() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
   return (
     <div className='storesdura'>
         <div className="storesdura-banner">
