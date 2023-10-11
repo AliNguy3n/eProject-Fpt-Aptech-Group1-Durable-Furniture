@@ -19,7 +19,9 @@
   <br  />
   <a  href="https://github.com/AliNguy3n/eProject-Fpt-Aptech-Group1-Durable-Furniture.git"><strong>Explore the source »</strong></a>
 
-  <br  /><a  href="">View Demo</a>  . <a  href="https://www.youtube.com/watch?v=R0qHGGMoqYU">Video</a>
+  <br  /><a  href="https://e-project-fpt-aptech-group1-durable-furnitures.vercel.app/">View Demo</a>  . <a  href="https://www.youtube.com/watch?v=R0qHGGMoqYU">Video</a>
+
+<img  src="https://raw.githubusercontent.com/AliNguy3n/eProject-Fpt-Aptech-Group1-Durable-Furniture/main/public/images/UI-DEMO.png"  alt="Logo"  width="auto"  height="200px">
 
   ### Built With
   Below is the languages/libraries we used for this project:
