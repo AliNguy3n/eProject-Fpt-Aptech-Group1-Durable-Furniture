@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useParams} from 'react-router-dom'
 import './ProductsPage.scss'
 import './ProductDetailsCard/ProductDetailsItems'
 import ProductDetailsItems from './ProductDetailsCard/ProductDetailsItems'
-import SearchBox from './SearchBox/SearchBox'
+
 import Brands from './Products/Brands.json'
 import ProductMix from './Products/ProductMix.json'
 import Products from './Products/Products.json'
@@ -14,16 +14,15 @@ import ProductBanner01 from '../../assets/images/ProductPage/BannerProductsPage-
 function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
   const Keyparam = useParams();
   const  Productsdata = (Keyparam.id === undefined ? Products : Products.filter( temp => temp.categories.id.toString() === Keyparam.id));
-
-  const [searchkey, setSearchKey] = useState(searchProduct)  
-  console.log('Seachkey tu Product',searchProduct)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
   const [sortKey, setSortKey] =useState('');
   const [brandCheckKey, setBrandKey] = useState([
     {id:1, name:"Durable Funitures", checked: false},
     {id:2, name:"Ashley Furniture", checked: false},
     {id:3, name:"Aron Furniture", checked: false},
     {id:4, name:"Row Furniture", checked: false},
-   
   ]);
   const [ categoriesCheckkey, setCategoriesCheckkey] =useState([
     {id:1, name:"Conference Tables", checked: false},
@@ -93,10 +92,7 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
   let keysortBrands = brandCheckKey.filter((item) =>  item.checked === true).map((item)=> {return(item.name)})
 
   let keysortCategories = categoriesCheckkey.filter((item) => item.checked === true).map((item)=> {return(item.name)})
-  let handleSeachKey = (SKey) =>{
-    setSearchKey(SKey);
-    console.log('Gia tri cua Skey',SKey)
-  }
+
   
   let sortData = (datainput) =>{
     let datasort1 = datainput.filter((item) =>{
@@ -139,12 +135,12 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
    }
    let datasort4 = datasort3.filter((item) =>{
     
-    if(searchkey === undefined || searchkey ===''){
-      console.log('Tham Chieu1',searchkey === undefined )
+    if(searchProduct === undefined || searchProduct ===''){
+      console.log('Tham Chieu1',searchProduct === undefined )
       return item}
       else{
           let newdata = item.name.toLowerCase()
-          return newdata.includes(searchkey)
+          return newdata.includes(searchProduct)
       }
     });
 
@@ -165,17 +161,17 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
   return (
     <div className='productspage'>
       <div className='productspage-banner'>
-        <img src={ProductBanner01} alt="banner01" className='productspage-banner-img'/>
+        <div className='productspage-banner-img'>
+          <img src={ProductBanner01} alt="banner01" />
+        </div>
         <div className='productspage-banner-title'>
           <h1>PRODUCTS</h1>
-          
           <h3>TIMELESS ELEGANCE</h3>
           <h5>A style composed of minimalist lines, harmonious colours, sophisticated materials and precious details, in the firm belief that the quality of style improves the living experience.</h5>
         </div>
       </div>
       <div className='productspage-control'>
         <div className='productspage-control-left'>
-          <SearchBox handleSeachKey={handleSeachKey}/>
         </div>
         <div className='productspage-control-center'>
           {brandCheckKey.map((item,index)=>{
@@ -198,7 +194,7 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
             }
             else{return null}
           })}
-          {searchkey === undefined ? null : <div><p>{searchkey}</p></div>  }
+          {searchProduct === undefined ? null : <div><p>{searchProduct}</p></div>  }
         </div>
         <div className='productspage-control-right'>
           <label htmlFor="">Sort by:&nbsp;</label>

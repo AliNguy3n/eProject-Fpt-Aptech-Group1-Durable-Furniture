@@ -8,7 +8,7 @@ $border-table-color: #ffffff80;
    
 }
 .banner{
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,7 +39,7 @@ $border-table-color: #ffffff80;
     }
     th{
         border: 1px solid $border-table-color;
-        padding: 1.4rem;
+        padding: 1.2rem 0;
         background-color: #6c7ae0;
         color: rgb(255, 255, 255);
         margin: 1px;
@@ -113,18 +113,26 @@ $border-table-color: #ffffff80;
         }
     }
 }
-.submit{
-    button{
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: #636363;
-        a:hover{
-            background-color: #7785f3;
-        }
-    }
-    
+.submit-button-cart{
+    flex: auto;
+    width: 22rem;
+    margin: 0.5rem;
+    height: auto;
+    outline:none;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+    border: 1px solid gainsboro;
+    color: #636363;
+    font-size: 1.2rem;
+    font-weight: 500;
+    &:hover{
+        background-color: #66d479;
+        color: #ffffff;
+        border: none;
+    }    
 }
 .cart-text-input{
+    flex: auto;
     height: 2.5rem;
     width: 22rem;
     margin: 0.5rem;
@@ -133,10 +141,22 @@ $border-table-color: #ffffff80;
     border-radius: 7px;
 }
 .cart-text-area{
-    height: 3rem;
+    flex: auto;
+    height: auto;
     width: 22rem;
     margin: 0.5rem;
     outline:none;
     border: 1px solid gainsboro;
     border-radius: 7px;
+}
+.accept-link{
+    flex: auto;
+    height: 2.6rem;
+    width: 22rem;
+    margin: 0.5rem;
+}
+@media (max-Width:768px){
+    .container table{
+        width: 95%;
+    }
 }

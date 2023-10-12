@@ -14,8 +14,6 @@ function FooterMain() {
       {id : '2', info : 'Stores', path:'/stores'},
       {id : '3', info : 'Ecosystem Of Durable', path:'/ecosystem'},
       {id : '4', info : 'Careers', path:'/careers'},
-      
-     
     ],
     Services : [
       {id : '1', info : 'Delivery Service', path :"/DeliveryServices"},
@@ -116,7 +114,7 @@ function FooterMain() {
           </ul>
       </div>
       <div className="footer-copyright">
-        <p className='footer-copyright'>&copy; Copyright by Group 1 T1.2306 M0 Aptech, Ali Nguyen </p>
+        <p className='footer-copyright'>&copy; Copyright by Group 1 T1.2306 M0 Aptech, Ali Nguy3n </p>
       </div>
     </div>
   )

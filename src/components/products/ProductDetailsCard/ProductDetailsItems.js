@@ -35,8 +35,8 @@ function ProductDetailsItems(props) {
             <img src={detailsicon} alt="detailsicon" className='productdetails-button-icon'/>
           </button>
         </Link>
-        <button className='productdetails-button-addToCart'>
-        <p  className='productdetails-button-p' onClick={() =>props.handleCarts({id:`${item.id}`,name:`${item.name}`,numberProduct:1,imgPreview:{path:`${item.images}`},price:`${item.price}`,colorstate:`${item.colorstate}`})}>Add To Cart</p>
+        <button className='productdetails-button-addToCart' onClick={() =>props.handleCarts({id:`${item.id}`,name:`${item.name}`,numberProduct:1,imgPreview:{path:`${item.images}`},price:`${item.price}`,colorstate:`${item.colorstate}`})}>
+        <p  className='productdetails-button-p' >Add To Cart</p>
           <img src={carticon} alt="carticon" className='productdetails-button-icon' />
         </button>
         <button className='productdetails-button-addToCart' onClick={()=>props.handleAddComp(item.id)}>

@@ -107,9 +107,6 @@ function ProductsComparison(props) {
                         </tr>
                     </thead>   
                 </table>
-                        
-
-
             </div>
         </div>
       )}

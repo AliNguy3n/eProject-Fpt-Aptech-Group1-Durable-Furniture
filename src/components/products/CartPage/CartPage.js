@@ -1,35 +1,37 @@
-import React, { useState } from 'react'
+
 import './CartPage.scss'
-import { Link } from 'react-router-dom'
+
 import img1 from '../../../assets/images/CartPage/Banner.png'
 function CartPage(props) {
-  const [datacart ,setDataCart] = useState(props.cart)
   let totalQuantity = 0;
   let totalCharge = 0;
   
   
   let handleAdd = (id) =>{
-    const updatevalue = datacart.map((item,index) =>{
+    const updatevalue = props.cart.map((item,index) =>{
       if(item.id === id){
         return{...item, numberProduct : item.numberProduct + 1}
       }else{ return item}
     });
-    setDataCart(updatevalue)
+    props.handledCartProductCart(updatevalue)
   }
   let handleSub = (id) =>{
-    const updatevalue = datacart.map((item,index) =>{
-      if(item.id === id){
+    const updatevalue = props.cart.map((item,index) =>{
+      if(item.id === id && item.numberProduct >= 1){
         return{...item, numberProduct : item.numberProduct - 1}
       }else{ return item}
     });
-    setDataCart(updatevalue)
+    props.handledCartProductCart(updatevalue)
   }
-  console.log('Gia tri cua gio hang duoc cap nhat',datacart)
-  datacart.map((item)=>{
+  let handleDelProductCart = (id)=>{
+    const updatevalue = props.cart.filter((item) =>item.id !==id)
+    props.handledCartProductCart(updatevalue)
+  }
+  props.cart.map((item)=>{
     totalQuantity = totalQuantity + item.numberProduct
     return(totalQuantity)
   })
-  datacart.map((item)=>{
+  props.cart.map((item)=>{
     totalCharge = totalCharge + item.numberProduct*item.price;
     return(totalQuantity)
   })
@@ -54,10 +56,11 @@ function CartPage(props) {
               <th>Price</th>
               <th>Quantity</th>
               <th>Total</th>
+              <th>Del</th>
             </tr>
           </thead>
           <tbody>
-              {datacart.map((temp,index) => {
+              {props.cart.map((temp,index) => {
                 return(
                   <tr key= {index}>
                     <td>{index +1 }</td>
@@ -71,10 +74,12 @@ function CartPage(props) {
                         <h4>{temp.numberProduct}</h4>
                         <button onClick={()=> handleAdd(temp.id)}><h4>+</h4></button>
                       </div>
-                    
                     </td>
                     <td>{(temp.price)*(temp.numberProduct)}</td>
-                   
+                    <td>
+                          <button type="button" className='table-remove-button' 
+                          onClick={() => handleDelProductCart(temp.id)} >Remove</button>
+                    </td>
                   </tr>
                   
                 )
@@ -83,29 +88,26 @@ function CartPage(props) {
               <td colSpan={"5"}>Total</td>
               <td >{totalQuantity} Unit</td>
               <td >{totalCharge} $</td>
-              
+              <td></td>
             </tr>
           </tbody>
         </table>
         <div className="container-wrapper">
           <div className='container-wrapper-info'>
+            <form action="SuccessPage" className='container-wrapper-info'>
                   <input type="text" className='cart-text-input' required placeholder='FIRST NAME:' /><br/>
 
                   <input type="text" className='cart-text-input' required placeholder='LAST NAME:' /><br/>
 
                   <input type="number" className='cart-text-input' required placeholder='PHONE:' /><br/>
  
-                  <textarea id="contact" name="contact" rows="4" cols="50" className='cart-text-area'  placeholder='Message' />
+                  <textarea id="contact" name="contact" rows="2" cols="50" className='cart-text-area'  placeholder='Message' />
                   <input type="text" className='cart-text-input' required placeholder='YOUR EMAIL:' /><br/>
-              </div>
+                  <input type='submit' value='Accept'  className='submit-button-cart'  />
+              </form>
           </div>
-        <div className='submit' >
-            <Link to='/SuccessPage'>
-              <button type='button' className='submit-button' >
-              Accept
-              </button>
-            </Link>
         </div>
+        
       </div>
     </div>
   )

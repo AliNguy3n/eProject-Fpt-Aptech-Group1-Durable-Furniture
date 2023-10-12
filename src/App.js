@@ -26,34 +26,40 @@ import ProductRecall from './components/help/ProductRecall';
 import StoresDura from './components/stores/StoresDura';
 import CareersDura from './components/stores/CareersDura';
 import EcoSystem from './components/stores/EcoSystem';
+import NotFound from './components/notFound/NotFound';
+import InformProduct from './components/inform/InformProduct';
 function App() {
   const [ comparison, setComparison] = useState('');
   const [ cart, setCart] = useState([]);
   const [ searchProduct, setSearchProduct ] =useState();
- 
+  const [ inform, setInForm] = useState([])
   console.log('Gia tri cua Seachr App',searchProduct)
-  let handleDelComparison = (id)=>{
+  const handleDelComparison = (id)=>{
     const newcomparison = comparison.filter((temp) => temp.id !== id);
     setComparison((comparison)=>newcomparison);
   }
-
-  let handleAddComparison = (id) =>{
+  const handleAddComparison = (id) =>{
     if(comparison.length <= 4){
       let newComp = ProductData.filter((item) => item.id===id)
     setComparison((comparison)=> [...comparison, newComp[0]]) 
     } else{
       return alert("You should only choose a maximum of 5 products.")
     }
-    
+    setInForm((inform) => [...inform,'Comp'])
     
   }
-  let handleAddProductCart = (datacart) =>{
+  const handleAddProductCart = (datacart) =>{
     setCart((cart)=> [...cart, datacart])
+    setInForm((inform) => [...inform,'Cart'])
+  }
+  const handledCartProductCart = (temp) =>{
+    setCart((cart) =>temp)
   }
   
-  let handleSeachProduct =(keySearchProduct) =>{
+  const handleSeachProduct =(keySearchProduct) =>{
     setSearchProduct(keySearchProduct)
   }
+  console.log(Array.isArray(inform))
   return (
     <Router>
       <div className="App">
@@ -67,14 +73,14 @@ function App() {
             <Route path="products/:id/detail/:id" element={<ProductDetailPage handleCarts={handleAddProductCart}/>}/>
             
             <Route path="detail/:id" element={<ProductDetailPage handleCarts={handleAddProductCart}/>}/>
-            <Route path="brands/:id" element={<ProductOfBrands  handleAddComp={handleAddComparison} handleCarts={handleAddProductCart}/>}/>
+            <Route path="brands/:id" element={<ProductOfBrands  handleAddComp={handleAddComparison} handleCarts={handleAddProductCart} searchProduct={searchProduct}/>}/>
             <Route path="brands/:id/detail/:id" element={<ProductDetailPage handleCarts={handleAddProductCart}/>}/>
-            <Route path="brands" element={<ProductOfBrands handleAddComp={handleAddComparison} handleCarts={handleAddProductCart}/>}/>
+            <Route path="brands" element={<ProductOfBrands handleAddComp={handleAddComparison} handleCarts={handleAddProductCart} searchProduct={searchProduct}/>}/>
 
             <Route path="contact" element={<ContactUs/>}/>
             <Route path="about-us" element={<AboutUs/>}/>
             <Route path="compare" element={<ProductsComparison handleDelComp={handleDelComparison} dataComparison={comparison}/>}/>
-            <Route path="cart" element={<CartPage cart={cart}/>}/>
+            <Route path="cart" element={<CartPage cart={cart} handledCartProductCart={handledCartProductCart}/>}/>
             <Route exact path="/DeliveryServices" element={<DeliveryServices/>} />
             <Route exact path="/InteriorDesignServices" element={<InteriorDesignServices/>} />
             <Route exact path="/TechnologySupport" element={<TechnologySupport/>} />
@@ -89,10 +95,10 @@ function App() {
             <Route path="stores" element={<StoresDura/>} />
             <Route path="careers" element={<CareersDura/>} />
             <Route path="ecosystem" element={<EcoSystem/>} />
-           
-            
+            <Route path="*" element={<NotFound/>} />
         </Routes>
         <FooterMain />
+        <InformProduct inform={inform} setInForm={setInForm}/>
       </div>
     </Router>
   );

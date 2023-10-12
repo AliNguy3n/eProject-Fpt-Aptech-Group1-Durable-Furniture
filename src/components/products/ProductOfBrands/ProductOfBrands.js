@@ -1,9 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useParams} from 'react-router-dom'
 import './ProductOfBrands.scss'
 import ProductDetailsItems from '../ProductDetailsCard/ProductDetailsItems'
-import SearchBox from '../SearchBox/SearchBox'
+
 import ProductMix from '../Products/ProductMix.json'
 import Products from '../Products/Products.json'
 import Pagination from '../../Pagination/Pagination'
@@ -15,10 +15,10 @@ import ProductBanner03 from '../../../assets/images/ProductOfBrands/Rowbanner.pn
 function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
   const Keyparam = useParams();
   const  Productsdata = (Keyparam.id === undefined ? Products : Products.filter( temp => temp.brand.id == Keyparam.id));
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
 
-  
-  const [searchkey, setSearchKey] = useState()  
-  
   const [sortKey, setSortKey] =useState('');
 
   const [ categoriesCheckkey, setCategoriesCheckkey] =useState([
@@ -81,10 +81,7 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
 
 
   let keysortCategories = categoriesCheckkey.filter((item) => item.checked === true).map((item)=> {return(item.name)})
-  let handleSeachKey = (SKey) =>{
-    setSearchKey(SKey);
-    console.log('Gia tri cua Skey',SKey)
-  }
+
   
   let sortData = (datainput) =>{
 
@@ -117,12 +114,12 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
    }
    let datasort3 = datasort2.filter((item) =>{
     
-    if(searchkey === undefined || searchkey ===''){
-      console.log('Tham Chieu1',searchkey === undefined )
+    if(searchProduct === undefined || searchProduct ===''){
+      console.log('Tham Chieu1',searchProduct === undefined )
       return item}
       else{
           let newdata = item.name.toLowerCase()
-          return newdata.includes(searchkey)
+          return newdata.includes(searchProduct)
       }
     });
 
@@ -143,7 +140,9 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
   return (
     <div className='productsbrandpage'>
         <div className='productsbrandpage-banner'>
-          <img src={Keyparam.id === '1'  ? ProductBanner01: (Keyparam.id === '2' ? ProductBanner02 : (Keyparam.id === '3' ? ProductBanner03: ProductBanner01))} alt="banner01" className='productsbrandpage-banner-img'/>
+          <div className='productsbrandpage-banner-img'>
+            <img src={Keyparam.id === '1'  ? ProductBanner01: (Keyparam.id === '2' ? ProductBanner02 : (Keyparam.id === '3' ? ProductBanner03: ProductBanner01))} alt="banner01" />
+          </div>
           <div className='productsbrandpage-banner-title'>
             <h1>{Productsdata[0].brand.name.toLocaleUpperCase()}</h1>
             <h3>TIMELESS ELEGANCE</h3>
@@ -152,7 +151,7 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
         </div>
         <div className='productsbrandpage-control'>
           <div className='productsbrandpage-control-left'>
-          <SearchBox handleSeachKey={handleSeachKey}/>
+
           </div>
           <div className='productsbrandpage-control-center'>
             {categoriesCheckkey.map((item,index)=>{
@@ -165,7 +164,7 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
               }
               else{return null}
             })}
-          {searchkey === undefined ? null : <div><p>{searchkey}</p></div>  } 
+          {searchProduct === undefined ? null : <div><p>{searchProduct}</p></div>  } 
           </div>
           <div className='productsbrandpage-control-right'>
             <label htmlFor="">Sort by:&nbsp;</label>
@@ -210,7 +209,8 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
       </div>
           </div>
           <div className='productsbrandpage-main-container'>
-            {currentPageData.map((items, index) =>{
+          {currentPageData.length=== 0? <h4 className='productspage-main-container-alert'>The product you are looking for is being updated by the store. Sorry for the inconvenience!</h4> :
+            currentPageData.map((items, index) =>{
               return(
                 <div className='productsbrandpage-main-container-items' key={index}>
                     <ProductDetailsItems id={items.id} name={items.name} categories={items.categories.name} colorstate ={items.detail.color[0]}

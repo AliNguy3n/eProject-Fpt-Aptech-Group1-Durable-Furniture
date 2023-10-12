@@ -1,29 +1,36 @@
 import React from 'react'
 import './ContactUs.scss'
 import { useEffect } from 'react'
+import image4 from '../../assets/images/ContactUs/Bedroom1920x1080px.jpg'
 function ContactUs() {
     useEffect(() => {
         window.scrollTo(0, 0)
         }, [])
   return (
     <div className='contact'>
-        <div className='contact-wrapper'>
-            <h1>Contact Us</h1>
-            <div className='contact-wrapper-info'>
-                <input type="text" className='text-input' placeholder='FIRST NAME:' /><br/>
-               
-                <input type="text" className='text-input' placeholder='LAST NAME:' /><br/>
-
-                <input type="number" className='text-input' placeholder='PHONE:' /><br/>
-                
-                <textarea id="contact" name="contact" rows="7" cols="50" className='text-area' placeholder='Message' />
-                <input type="text" className='text-input' placeholder='YOUR EMAIL:' /><br/>
-                
-                
-                <button type="submit" className='submit-button' onClick={(event)=>(alert('Chúng tôi đã nhận được yêu cầu của bạn, vui lòng chờ lâu lâu lâu....!'))}>SUBMIT</button>
+        <div className="contact-banner">
+            <img className='contact-banner-img' src={image4} alt="banner" />
+            <div className="contact-banner-cover">
+                <h1>Contact Us</h1>
             </div>
+
+        </div>
+        <div className='contact-wrapper'>
+            <br />
+            <p>For all enquiries please use the below form to contact your closest store who will get in contact shortly. Your closest store is your service point and can assist you on claims, product information, availability, delivery, prices, and more. If you are enquiring about an order, please choose the store where you made the purchase. If you are unsure which store that is, or if that store has closed, then please choose your closest store.</p>
+            <div className='contact-wrapper-info'>
+                <form action="" className='contact-wrapper-info'>
+                <input type="text" className='text-input' required placeholder='FIRST NAME:' /><br/>
+                <input type="text" className='text-input' required placeholder='LAST NAME:' /><br/>
+                <input type="number" className='text-input' required placeholder='PHONE:' /><br/>
+                <textarea id="contact" name="contact" rows="2" cols="50" required className='text-area' placeholder='Message' />
+                <input type="text" className='text-input' required placeholder='YOUR EMAIL:' /><br/>
+                <input type="submit" value='Send' className='submit-button' onSubmit={(event)=>(alert('Thank you, your request has been received! We will contact you very soon.!'))}/>
+                </form>
+            </div>
+
             <div className='contact-wrapper-content'>
-                <div style={{maxWidth:'400px'}}>
+                <div className='contact-wrapper-content-address'>
                     <h3>Headquarters</h3>
                     <p>
                         <i className="fa-solid fa-location-dot"></i>
@@ -42,8 +49,8 @@ function ContactUs() {
                     </p>
                    
                 </div>
-                <div>
-                    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d979.830153144561!2d106.66551812845046!3d10.786737916740972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1696304006211!5m2!1svi!2s" width="450" height="400" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div className='contact-wrapper-content-map'>
+                    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d979.830153144561!2d106.66551812845046!3d10.786737916740972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1696304006211!5m2!1svi!2s" width="100%" height="200" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div className='contact-wrapper-content'>
@@ -66,8 +73,8 @@ function ContactUs() {
                     </p>
                    
                 </div>
-                <div>
-                    <iframe  title="map"  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d979.6956868435008!2d106.7208836!3d10.8279311!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1696304724372!5m2!1svi!2s" width="450" height="400" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div className='contact-wrapper-content-map'>
+                    <iframe  title="map"  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d979.6956868435008!2d106.7208836!3d10.8279311!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1696304724372!5m2!1svi!2s" width="100%" height="200" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             

@@ -109,7 +109,8 @@ function ProductDetailPage({handleCarts}) {
         
         <div className="dimensions">
           <h2>Dimension</h2>
-          <img src={item[0].imagesdms} alt="dim" />
+          {item[0].imagesdms ==='null' ?' ': <img src={item[0].imagesdms} alt="dim" />}
+          
         </div>
         <div className="reviews"></div>
       </div>

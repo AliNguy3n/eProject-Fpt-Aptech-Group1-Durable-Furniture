@@ -4,9 +4,9 @@
     top: 7rem;
     right: 2rem;
 }
-.comparsonInform{
-    width: 18rem;
-    height: 4rem;
+.Comp{
+    width: 17rem;
+    height: 3rem;
     background-color: #1fc781f6;
     margin: 5px;
     border-radius: 7px;
@@ -16,14 +16,14 @@
     padding: 7px;
     align-items: center;
     justify-content: flex-start;
-    animation: myInform 1000ms;
+    animation: myInform 300ms ease-out;
     h4{
         color: #fff;
     }
 }
-.cartInform{
-    width: 18rem;
-    height: 4rem;
+.Cart{
+    width: 17rem;
+    height: 3rem;
     background-color: #59bfd3df;
     margin: 5px;
     border-radius: 7px;
@@ -33,7 +33,7 @@
     padding: 7px;
     align-items: center;
     justify-content: flex-start;
-    animation: myInform 1000ms;
+    animation: myInform 300ms ease-out;
     h4{
         color: #fff;
     }
