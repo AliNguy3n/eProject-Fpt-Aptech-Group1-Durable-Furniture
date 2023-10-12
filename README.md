@@ -33,7 +33,11 @@
 
 ![HTML]&nbsp;![CSS3] &nbsp;![JS]&nbsp;![SASS]&nbsp;![REACT]
 <div  align="left">
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f94947427030b4d837f58b5715b0aac986fad9d2
 ### Features </br>
 <ol>
 <li>
