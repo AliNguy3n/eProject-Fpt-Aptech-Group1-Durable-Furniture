@@ -1201,9 +1201,9 @@
         "model" :"Durafu-FaSof06",
         "desc1" : "Rumba left-right corner sofa with compact, flexible design with removable L-shaped corner. Suitable for apartments with small and medium spaces, you can freely arrange the corner to the right or left depending on the structure of the corner of the room. Furthermore, you can also transform a simple corner sofa set into a separate 3.1 sofa set to make your living room space more new.",
         "images" :[
-            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/DuraFu-FaSof06/sofa-rumba2.jpg"},
-            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/DuraFu-FaSof06/sofa-rumba2.jpg"},
-            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/DuraFu-FaSof06/sofa-rumba2.jpg"}
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/Durafu-FaSof06/sofa-rumba2.jpg"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/Durafu-FaSof06/sofa-rumba2.jpg"},
+            {"id": "3", "Name": "pic3", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/Durafu-FaSof06/sofa-rumba2.jpg"}
             
         ],
         "imagesPreview":[
@@ -1246,8 +1246,8 @@
         "model" :"Durafu-FaSof07",
         "desc1" : "Shadow corner sofa with a gentle, simple but no less sophisticated design. The sofa arm is designed in a rounded shape to create a neat and elegant feeling. Shadow corner sofa is suitable for modern apartment living room spaces with small and medium areas.",
         "images" :[
-            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/DuraFu-FaSof07/sofa-shadow3.jpg"},
-            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/DuraFu-FaSof07/sofa-shadow2.jpg"}
+            {"id": "1", "Name": "pic1", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/Durafu-FaSof07/sofa-shadow3.jpg"},
+            {"id": "2", "Name": "pic2", "use": "desc" , "path": "/data/AronFurniture/Sofas/Fabric-Sofas/Durafu-FaSof07/sofa-shadow2.jpg"}
             
             
         ],
