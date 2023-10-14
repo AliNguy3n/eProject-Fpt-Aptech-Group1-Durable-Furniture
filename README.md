@@ -20,7 +20,7 @@
   <a  href="https://github.com/AliNguy3n/eProject-Fpt-Aptech-Group1-Durable-Furniture.git"><strong>Explore the source »</strong></a>
   <a  href="https://github.com/AliNguy3n/eProject-Fpt-Aptech-Group1-Durable-Furniture/tree/0bdf01110342da7cd513cae701f6f8eed61816cd/documents" target="_blank"><strong>Explore the documents »</strong></a>
 
-  <br  /><a  href="https://e-project-fpt-aptech-group1-durable-furnitures.vercel.app/" target="_blank">View Demo</a>  . <a  href="https://youtu.be/ifyn8Bgke8M" target="_blank">Video</a>
+  <br  /><a  href="https://e-project-fpt-aptech-group1-durable-furnitures.vercel.app/" target="_blank">View Demo</a>  . <a  href="https://youtu.be/-6b57JYreSc" target="_blank">Video</a>
 
 <img  src="https://raw.githubusercontent.com/AliNguy3n/eProject-Fpt-Aptech-Group1-Durable-Furniture/main/public/images/UI-DEMO.png"  alt="Logo"  width="768px"  height="auto">
 
@@ -33,11 +33,10 @@
 
 ![HTML]&nbsp;![CSS3] &nbsp;![JS]&nbsp;![SASS]&nbsp;![REACT]
 <div  align="left">
-<<<<<<< HEAD
 
-=======
+
+
   
->>>>>>> f94947427030b4d837f58b5715b0aac986fad9d2
 ### Features </br>
 <ol>
 <li>

@@ -19,9 +19,7 @@ function TopBars({handleSeachProduct,indexofCart}) {
       </div>
       <div className="top-bar-right">
         <div className="title-bar" style={{color: location ==='/'?'': '#515151'}}>
-         
             <i className="fa-solid fa-user cart" style={{color: location ==='/'?'': '#515151'}}>&nbsp;</i>
-         
         </div>
         <div className="top-bar-right-cart" >
           <Link to='/cart'>

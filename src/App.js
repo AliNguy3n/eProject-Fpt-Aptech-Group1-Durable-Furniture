@@ -28,6 +28,7 @@ import CareersDura from './components/stores/CareersDura';
 import EcoSystem from './components/stores/EcoSystem';
 import NotFound from './components/notFound/NotFound';
 import InformProduct from './components/inform/InformProduct';
+
 function App() {
   const [ comparison, setComparison] = useState('');
   const [ cart, setCart] = useState([]);
@@ -96,8 +97,10 @@ function App() {
             <Route path="careers" element={<CareersDura/>} />
             <Route path="ecosystem" element={<EcoSystem/>} />
             <Route path="*" element={<NotFound/>} />
+           
         </Routes>
         <FooterMain />
+        
         <InformProduct inform={inform} setInForm={setInForm}/>
       </div>
     </Router>
