@@ -13,7 +13,8 @@ function LoginMain() {
             })
             return newarr.join('')
         }
-       
+        
+        return( conver(username) === '97100109105110' && conver(pass) === '97100109105110')
     }
   return (
     <div className='login-main'>

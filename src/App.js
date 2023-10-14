@@ -29,6 +29,7 @@ import EcoSystem from './components/stores/EcoSystem';
 import NotFound from './components/notFound/NotFound';
 import InformProduct from './components/inform/InformProduct';
 
+
 function App() {
   const [ comparison, setComparison] = useState('');
   const [ cart, setCart] = useState([]);
@@ -100,7 +101,7 @@ function App() {
            
         </Routes>
         <FooterMain />
-        
+
         <InformProduct inform={inform} setInForm={setInForm}/>
       </div>
     </Router>

@@ -138,7 +138,7 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
     let datasort3 = datasort2.filter((item) =>{
       if( keysortcolorfilter.length === 0){
         return true
-      } else{
+      } else {
          let colorsort = item.detail.color.map((temp,index) =>{
           return keysortcolorfilter.includes(temp)
         })
@@ -167,9 +167,12 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
     
     if(searchProduct === undefined || searchProduct ===''){
       return item}
+      else if ( searchProduct.toLowerCase() === item.name.toLowerCase()){
+        return item
+      }
       else{
           let newdata = item.name.toLowerCase()
-          return newdata.includes(searchProduct)
+          return newdata.includes(searchProduct.toLowerCase())
       }
     });
     console.log('gia tri sort 5',datasort5)
