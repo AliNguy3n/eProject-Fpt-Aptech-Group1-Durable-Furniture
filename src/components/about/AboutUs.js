@@ -5,11 +5,9 @@ import image2 from '../../assets/images/AboutImages/Founder-removebg-preview.png
 import image3 from '../../assets/images/AboutImages/Durable-style.jpg'
 import image4 from '../../assets/images/AboutImages/factory-furniture.jpg'
 import image5 from '../../assets/images/AboutImages/banner_aboutus.jpg'
-import { useEffect } from 'react'
+
 function AboutUs() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-        }, [])
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   return (
     <div className='about-us'>
         <div className="about-us-banner">

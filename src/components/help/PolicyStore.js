@@ -1,11 +1,9 @@
 import React from 'react'
 import './HelpofStoreStyle.scss'
 import imgbannerservices from '../../assets/images/ServicesImages/banner-main.jpg';
-import { useEffect } from 'react';
+
 function PolicyStore() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-        }, [])
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   return (
     <div className='faqstore'>
     <div className='faqstore-banner'>

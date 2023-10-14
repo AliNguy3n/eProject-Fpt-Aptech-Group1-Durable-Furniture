@@ -1,10 +1,7 @@
 import React from 'react'
 import './Services.scss'
-import { useEffect } from 'react'
 function TechnologySupport() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    }, [])
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   return (
   <div className='services'>
     <img src='https://nhaxinh.com/wp-content/uploads/2023/05/nha-xinh-thiet-ke-noi-that-ecopark-16523.jpg' alt=''></img>

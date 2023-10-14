@@ -1,11 +1,9 @@
 import React from 'react'
 import './Services.scss'
 import imgbanner from '../../assets/images/ServicesImages/Banner-01.jpg'
-import { useEffect } from 'react'
+
 function InstorePlanningServices() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    }, [])
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   return (
   <div className='services'>
     <div className="services-image">

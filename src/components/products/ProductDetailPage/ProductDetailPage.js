@@ -81,7 +81,7 @@ function ProductDetailPage({handleCarts}) {
           <h5>Dimension: Height: {item[0].detail.height} cm x Width: {item[0].detail.width} cm x Depth: {item[0].detail.depth} cm</h5>
           
           <div className='content-bar-cart'>
-            <h2>Price: {item[0].price}</h2>
+            <h2>Price: {item[0].price} $</h2>
               <div className='content-bar-cart-numbers'>
                 <button onClick={()=> handleSub()}><h4>-</h4></button>
                 <h4>{numberProduct}</h4>

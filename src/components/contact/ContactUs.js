@@ -1,11 +1,9 @@
 import React from 'react'
 import './ContactUs.scss'
-import { useEffect } from 'react'
+
 import image4 from '../../assets/images/ContactUs/Bedroom1920x1080px.jpg'
 function ContactUs() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-        }, [])
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   return (
     <div className='contact'>
         <div className="contact-banner">

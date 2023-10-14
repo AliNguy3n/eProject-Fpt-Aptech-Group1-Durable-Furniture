@@ -3,7 +3,6 @@ import { useState,useEffect } from 'react'
 import { useParams} from 'react-router-dom'
 import './ProductOfBrands.scss'
 import ProductDetailsItems from '../ProductDetailsCard/ProductDetailsItems'
-
 import ProductMix from '../Products/ProductMix.json'
 import Products from '../Products/Products.json'
 import Pagination from '../../Pagination/Pagination'
@@ -48,10 +47,28 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
     {id:24, name:"TV Benches", checked: false},
   ])
   
+  const [colorfilter, setColorfilter] = useState([
+    {id:1, name:"black", checked: false},
+    {id:2, name:"gray", checked: false},
+    {id:3, name:"white", checked: false},
+    {id:4, name:"blue", checked: false},
+    {id:5, name:"pink", checked: false},
+    {id:6, name:"brown", checked: false},
+    {id:7, name:"orange", checked: false},
+    {id:8, name:"beige", checked: false},
+    {id:9, name:"green", checked: false},
+    {id:10, name:"red", checked: false},
+    {id:11, name:"yellow", checked: false},
+  ])
 
   const ProductList = Object.entries(ProductMix);
   let accordion = [];
-  
+  const [pricesearch, setPricesearch] =useState('');
+
+  const handleChangePrice =(value) =>{
+    setPricesearch(value)
+  }
+
   Object.entries(ProductList).map((items,index)=>{
     return(accordion[index] = false)
   })
@@ -78,10 +95,18 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
     });
     setCategoriesCheckkey(updatecategories);
   }
-
+  let handleCheckColor = (id) =>{
+    let updateColor = colorfilter.map((item,index) =>{
+      if(item.id === id){
+        return{...item, checked : !item.checked}
+      }else{return item}
+    })
+    setColorfilter(updateColor)
+  }
 
   let keysortCategories = categoriesCheckkey.filter((item) => item.checked === true).map((item)=> {return(item.name)})
 
+  let keysortcolorfilter = colorfilter.filter((item) => item.checked === true).map((item)=> {return(item.name)})
   
   let sortData = (datainput) =>{
 
@@ -93,26 +118,34 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
       }
     })
     
-  
    let datasort2 =[];
    switch(sortKey){
       case 'Most Popular' :
-         datasort2 = datasort1.sort((item1 ,item2) => item1.top -item2.top);
+         datasort2 = datasort1.sort((item1 ,item2) => parseFloat(item1.top) -parseFloat(item2.top));
         break;
       case 'Rating' :
-        datasort2 = datasort1.sort((item1 ,item2) => item2.rating -item1.rating);
+        datasort2 = datasort1.sort((item1 ,item2) => parseFloat(item2.rating) -parseFloat(item1.rating));
         break;
       case 'Price Ascending' :
-        datasort2 = datasort1.sort((item1 ,item2) => item1.price -item2.price);
+        datasort2 = datasort1.sort((item1 ,item2) => parseFloat(item1.price) -parseFloat(item2.price));
         break;
       case 'Price Descending' :
-        datasort2 = datasort1.sort((item1 ,item2) => item2.price -item1.price);
+        datasort2 = datasort1.sort((item1 ,item2) => parseFloat(item2.price) -parseFloat(item1.price));
         break;
       default:
-         datasort2 = datasort1;
-        
-   }
-   let datasort3 = datasort2.filter((item) =>{
+         datasort2 = datasort1;   
+      }
+      let datasort3 = datasort2.filter((item) =>{
+        if( keysortcolorfilter.length === 0){
+          return true
+        } else{
+           let colorsort = item.detail.color.map((temp,index) =>{
+            return keysortcolorfilter.includes(temp)
+          })
+          return colorsort.includes(true);
+        }
+      })
+    let datasort4 = datasort3.filter((item) =>{
     
     if(searchProduct === undefined || searchProduct ===''){
       console.log('Tham Chieu1',searchProduct === undefined )
@@ -122,8 +155,15 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
           return newdata.includes(searchProduct)
       }
     });
+    let datasort5 =datasort4.filter((item) => {
+      if(pricesearch === ''){
+        return item
+      }else{
+        return parseFloat(item.price)  < parseFloat(pricesearch)
+      }
+      })
 
-    return datasort3
+    return datasort5
   }
   let ProductData1 = sortData(Productsdata) ;
 
@@ -151,7 +191,18 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
         </div>
         <div className='productsbrandpage-control'>
           <div className='productsbrandpage-control-left'>
-
+            <h4>Color:</h4> <br />
+            {colorfilter.map((temp, index) =>{
+              return(
+                <div  className='productsbrandpage-control-left-item'  key={temp.name}>
+                  <div  className='productsbrandpage-control-left-item-color' style={{ border: temp.checked   === true? 'solid 2px 	#0080ff' : ''}}>
+                    <div className={temp.name} >
+                      <input type="checkbox" value={temp.name} name={temp.name} id={temp.name} onClick={() => handleCheckColor(temp.id)} />
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
           </div>
           <div className='productsbrandpage-control-center'>
             {categoriesCheckkey.map((item,index)=>{
@@ -180,6 +231,13 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
         </div>
         <div className='productsbrandpage-main'>
           <div className='productsbrandpage-main-sidebar'>
+            <div className='price-search'>
+              <div className='price-search-range'>
+                <p>Price:</p>
+                <h4>$:{pricesearch}</h4>
+                <input type='range' min='1' max='3450'  onChange= {(event)=> handleChangePrice(event.target.value)} />
+              </div>
+            </div>
           <div className='accordionMenu'>
             {ProductList.map((items ,index ) =>{
               return(
