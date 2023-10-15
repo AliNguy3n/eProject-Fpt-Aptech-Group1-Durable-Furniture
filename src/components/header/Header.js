@@ -8,7 +8,7 @@ function Header(props) {
   return (
     <div className={location.pathname ==='/' ? 'header-disable': 'header-active'}>
         <div className='topbar-nav-main'>
-            <TopBars handleSeachProduct={props.handleSeachProduct} indexofCart={props.indexofCart} />
+            <TopBars handleSeachProduct={props.handleSeachProduct} indexofCart={props.indexofCart} handlelogin={props.handlelogin} registerUser={props.registerUser} />
             <NavMain />
         </div>
 

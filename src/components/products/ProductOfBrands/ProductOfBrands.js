@@ -148,7 +148,7 @@ function ProductOfBrands({handleAddComp,handleCarts,searchProduct}) {
     let datasort4 = datasort3.filter((item) =>{
     
     if(searchProduct === undefined || searchProduct ===''){
-      console.log('Tham Chieu1',searchProduct === undefined )
+     
       return item}
       else{
           let newdata = item.name.toLowerCase()

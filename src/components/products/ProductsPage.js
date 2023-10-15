@@ -175,7 +175,6 @@ function ProductsPage({handleAddComp,handleCarts,searchProduct}) {
           return newdata.includes(searchProduct.toLowerCase())
       }
     });
-    console.log('gia tri sort 5',datasort5)
     let datasort6 =datasort5.filter((item) => {
       if(pricesearch === ''){
         return item

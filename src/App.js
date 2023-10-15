@@ -28,14 +28,16 @@ import CareersDura from './components/stores/CareersDura';
 import EcoSystem from './components/stores/EcoSystem';
 import NotFound from './components/notFound/NotFound';
 import InformProduct from './components/inform/InformProduct';
-
+import LoginMain from './components/form/LoginMain';
 
 function App() {
   const [ comparison, setComparison] = useState('');
   const [ cart, setCart] = useState([]);
   const [ searchProduct, setSearchProduct ] =useState();
   const [ inform, setInForm] = useState([])
-  console.log('Gia tri cua Seachr App',searchProduct)
+  const [ registerOn, setRegisterOn] =useState(false)
+  const [ registerUser, setRegisterUser] =useState()
+  
   const handleDelComparison = (id)=>{
     const newcomparison = comparison.filter((temp) => temp.id !== id);
     setComparison((comparison)=>newcomparison);
@@ -61,11 +63,16 @@ function App() {
   const handleSeachProduct =(keySearchProduct) =>{
     setSearchProduct(keySearchProduct)
   }
-  console.log(Array.isArray(inform))
+  const handlelogin =()=>{
+    setRegisterOn((registerOn) => !registerOn)
+  }
+  const handleUser = (user) =>{
+    setRegisterUser(user);
+  }
   return (
     <Router>
       <div className="App">
-        <Header handleSeachProduct={handleSeachProduct} indexofCart={cart.length} />
+        <Header handleSeachProduct={handleSeachProduct} indexofCart={cart.length} handlelogin={handlelogin} registerOn={registerOn} registerUser={registerUser} />
         <Routes>
             <Route path="/" element={<Home handleAddComp={handleAddComparison} handleCarts={handleAddProductCart}/>}/>
 
@@ -101,7 +108,7 @@ function App() {
            
         </Routes>
         <FooterMain />
-
+        <LoginMain handlelogin={handlelogin} registerOn={registerOn} handleUser={handleUser}/>
         <InformProduct inform={inform} setInForm={setInForm}/>
       </div>
     </Router>

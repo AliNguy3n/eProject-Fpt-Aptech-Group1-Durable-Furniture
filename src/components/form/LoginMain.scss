@@ -14,15 +14,34 @@
         justify-content: center;
         align-items: center;
         color: #fff;
+        animation: loginStyle 200ms ease-in ;
         &-item{
             border: 2px rgb(224, 224, 224) solid;
             background-color: #20202039;
             border-radius: 7px;
             width: 20rem;
-            height: auto;
+            height: 22rem;
             position: absolute;
-            transform: translateY(-20%);
+            transform: translateY(-15%);
             padding: 2rem;
+            &-close{
+                position: absolute;
+                top: 0;
+                right:0;
+                border: 1px solid #ffffff00;
+                width: 3rem;
+                text-align: center;
+                border-radius: 0px 3px 0px 3px ;
+                display: block;
+                background-color: rgba(255, 0, 0, 0.394);
+                cursor: pointer;
+                
+            }
+            h3{
+                font-size: 1.2rem;
+                margin: 3px;
+                text-align: center;
+            }
             p{
                 margin: 3px;
             }
@@ -68,5 +87,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes loginStyle{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

@@ -9,7 +9,7 @@ function ProductDetailPage({handleCarts}) {
   const data = Products;
   const keypara = useParams();
   const id = keypara.id;
-  console.log('gia tri id item', typeof keypara.id)
+  
   let item = data.filter((item) => item.id === parseInt(keypara.id))
   let imgPreview = item[0].imagesPreview[0];
   let name = item[0].name;

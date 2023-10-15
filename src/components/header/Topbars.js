@@ -6,7 +6,7 @@ import Search from "./Search";
 import LogoMain from "./LogoMain"
 import '../../styles/VariableStyle.scss'
 
-function TopBars({handleSeachProduct,indexofCart}) {
+function TopBars({handleSeachProduct,indexofCart,handlelogin,registerUser}) {
   let location = useLocation().pathname;
  
   return (
@@ -18,7 +18,8 @@ function TopBars({handleSeachProduct,indexofCart}) {
         <Search handleSeachProduct={handleSeachProduct}/>
       </div>
       <div className="top-bar-right">
-        <div className="title-bar" style={{color: location ==='/'?'': '#515151'}}>
+        <div className="title-bar" style={{color: location ==='/'?'': '#515151'}} onClick={()=>handlelogin()}>
+            <p>{ registerUser !== undefined ? registerUser.name : ''}</p> &ensp;
             <i className="fa-solid fa-user cart" style={{color: location ==='/'?'': '#515151'}}>&nbsp;</i>
         </div>
         <div className="top-bar-right-cart" >
