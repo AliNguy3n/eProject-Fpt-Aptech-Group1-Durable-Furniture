@@ -84,7 +84,7 @@ function FooterMain() {
             <p>
                 <i className="fa-solid fa-location-dot"></i>
                 <strong>&nbsp;Address:&nbsp;&nbsp;&nbsp;</strong>
-                590 D. Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City
+                Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City
             </p>
             <p>
                 <i className="fa-solid fa-phone"></i>
@@ -114,7 +114,7 @@ function FooterMain() {
           </ul>
       </div>
       <div className="footer-copyright">
-        <p className='footer-copyright'>&copy; Copyright by Group 1 T1.2306 M0 Aptech, Ali Nguy3n </p>
+        <p className='footer-copyright'>&copy; Copyright by Ali Nguy3n </p>
       </div>
     </div>
   )
